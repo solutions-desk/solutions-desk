@@ -1,0 +1,34 @@
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\bin\Debug\crm_w12.exe
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\bin\Debug\crm_w12.pdb
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.csprojResolveAssemblyReference.cache
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.Properties.Resources.resources
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.csproj.GenerateResource.Cache
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.exe
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.pdb
+c:\users\w12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmPrincipal.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmLigacoes.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmEmail.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmGriaule.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmRelatorios.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmTicket.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmCatraca.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmConfig.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmTags.resources
+C:\Users\W12\documents\visual studio 2012\Projects\crm_w12\crm_w12\obj\Debug\crm_w12.frmHome.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.exe
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.pdb
+E:\PIM\PROJETO\crm_w12\crm_w12\bin\Debug\crm_w12.exe
+E:\PIM\PROJETO\crm_w12\crm_w12\bin\Debug\crm_w12.pdb
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.csprojResolveAssemblyReference.cache
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmCatraca.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmConfig.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmEmail.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmGriaule.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmHome.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmLigacoes.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmPrincipal.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmRelatorios.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmTags.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.frmTicket.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.Properties.Resources.resources
+E:\PIM\PROJETO\crm_w12\crm_w12\obj\Debug\crm_w12.csproj.GenerateResource.Cache

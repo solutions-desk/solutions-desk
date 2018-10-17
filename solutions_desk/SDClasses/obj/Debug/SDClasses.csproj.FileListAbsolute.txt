@@ -1,0 +1,12 @@
+D:\PIM\PROJETO\solutions_desk\SDClasses\bin\Debug\SDClasses.dll
+D:\PIM\PROJETO\solutions_desk\SDClasses\bin\Debug\SDClasses.pdb
+D:\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.csprojAssemblyReference.cache
+D:\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.csproj.CoreCompileInputs.cache
+D:\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.dll
+D:\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.pdb
+C:\Projetos\PIM\PROJETO\solutions_desk\SDClasses\bin\Debug\SDClasses.dll
+C:\Projetos\PIM\PROJETO\solutions_desk\SDClasses\bin\Debug\SDClasses.pdb
+C:\Projetos\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.csprojAssemblyReference.cache
+C:\Projetos\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.csproj.CoreCompileInputs.cache
+C:\Projetos\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.dll
+C:\Projetos\PIM\PROJETO\solutions_desk\SDClasses\obj\Debug\SDClasses.pdb
