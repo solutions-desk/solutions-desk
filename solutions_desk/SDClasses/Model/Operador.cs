@@ -14,6 +14,7 @@ namespace SDClasses.Model
 
         public Operador()
         {
+
             
         }
 

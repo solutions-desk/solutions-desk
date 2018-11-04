@@ -38,18 +38,18 @@ namespace solutions_desk
 
             LoginController loginController = new LoginController();
 
-            operador = loginController.validaLogin(txtUsuario.Text, txtSenha.Text);
+            operador = loginController.validaLoginOperador(txtUsuario.Text, txtSenha.Text);
 
             if (operador.Nome != "")
             {
-                lblEsperando.Text = operador.Nome;
+                
                 this.Hide();
                 var telaPrincipal = new frmPrincipal(this, operador);
                 telaPrincipal.Show();
             }
             else
             {
-                lblEsperando.Text = "Usuário não encontrado";
+                panelAviso.Show();
             }
 
         }
@@ -71,22 +71,8 @@ namespace solutions_desk
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            PrivateFontCollection materialFont = new PrivateFontCollection();
-
-            int fontLength = Properties.Resources.MaterialIcons.Length;
-
-            byte[] fontData = Properties.Resources.MaterialIcons;
-
-            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
-
-            Marshal.Copy(fontData, 0, data, fontLength);
-
-            materialFont.AddMemoryFont(data, fontLength);
-
-
-            Font fontIconsDefault = new Font(materialFont.Families[0], 18);
-            label7.Font = new Font(materialFont.Families[0], 24);
-            label7.Text = "home";
+            panelAviso.Hide();
+            
 
         }
 
@@ -126,6 +112,21 @@ namespace solutions_desk
             txtSenha.Text = "";
             //txtUsuario.PlaceHolderText = "Digite seu e-mail";
             //txtSenha.PlaceHolderText = "****";
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEsperando_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

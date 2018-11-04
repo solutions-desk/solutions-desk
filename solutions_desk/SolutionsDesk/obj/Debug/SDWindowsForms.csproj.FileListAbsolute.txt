@@ -53,10 +53,6 @@ D:\PIM\PROJETO\solutions_desk\SolutionsDesk\bin\Debug\SDClasses.dll
 D:\PIM\PROJETO\solutions_desk\SolutionsDesk\bin\Debug\SDClasses.pdb
 D:\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\SDWindowsForms.csproj.CopyComplete
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\SDWindowsForms.csprojAssemblyReference.cache
-C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmCatraca.resources
-C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmConfig.resources
-C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmEmail.resources
-C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmHome.resources
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmLogin.resources
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmPrincipal.resources
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmRelatorios.resources
@@ -75,3 +71,5 @@ C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.ex
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.pdb
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\bin\Debug\MaterialSkin.dll
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmAbrirChamado.resources
+C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmHistoricoChamado.resources
+C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.UserControls.UCchamados.resources

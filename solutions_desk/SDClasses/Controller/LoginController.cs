@@ -13,7 +13,7 @@ namespace SDClasses.Controller
     {
         private string connectionString;
 
-        public Operador validaLogin(String login, String senha)
+        public Operador validaLoginOperador(String login, String senha)
         {
             Operador operador = new Operador();
             
@@ -29,6 +29,24 @@ namespace SDClasses.Controller
             return operador;
             
         }
+
+        public Cliente validaLoginCliente(String email, String senha)
+        {
+            Cliente cliente = new Cliente();
+
+            if (email != "" & senha != "")
+            {
+                cliente.Email = email;
+                cliente.Senha = senha;
+
+                this.buscaCliente(cliente);
+
+            }
+
+            return cliente;
+
+        }
+
 
         public Operador buscaUsuario(Operador operador)
         {
@@ -59,6 +77,37 @@ namespace SDClasses.Controller
             {
 
                 return new Operador();
+            }
+        }
+        public Cliente buscaCliente(Cliente cliente)
+        {
+            connectionString = @"Data Source=DESKTOP-QTSN2HH;Initial Catalog=HELPDESK;Integrated Security=TRUE";
+            SqlConnection cnn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            cmd.CommandText = "SELECT * FROM CLIENTE WHERE EMAIL_CLI = '" + cliente.Email + "' AND SENHA_CLI = " + cliente.Senha;
+            cmd.Connection = cnn;
+
+            try
+            {
+                cnn.Open();
+
+                dr = cmd.ExecuteReader();
+
+                dr.Read();
+                cliente.Nome = dr["NOME_CLI"].ToString();
+
+                cnn.Close();
+                return cliente;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return new Cliente();
             }
         }
     }
