@@ -144,9 +144,14 @@ namespace solutions_desk
             frmAbrirChamado.BringToFront();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void lblHistoricoChamado_Click(object sender, EventArgs e)
         {
-
+            panelPai.Controls.Clear();
+            frmHistoricoChamado frmHistoricoChamado = new frmHistoricoChamado();
+            frmHistoricoChamado.TopLevel = false;
+            panelPai.Controls.Add(frmHistoricoChamado);
+            frmHistoricoChamado.Show();
+            frmHistoricoChamado.BringToFront();
         }
     }
 }

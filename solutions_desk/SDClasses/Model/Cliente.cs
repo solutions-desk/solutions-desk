@@ -28,7 +28,7 @@ namespace SDClasses.Model
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
-            cmd.CommandText = "SELECT * FROM CLIENTE WHERE PK_CLI = " + id + ";";
+            cmd.CommandText = "SELECT * FROM CLIENTES WHERE PK_CLI = " + id + ";";
             cmd.Connection = cnn;
 
             Cliente cliente = new Cliente();

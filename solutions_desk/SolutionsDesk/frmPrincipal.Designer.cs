@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelPai = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.lblAbrirChamado = new System.Windows.Forms.Label();
+            this.lblConfiguracoes = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.lblListaClientes = new System.Windows.Forms.Label();
             this.lblHistoricoChamado = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
+            this.panelSelecionado = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMinimizeForm = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.lblNomeUsuarioLogado = new System.Windows.Forms.Label();
-            this.lblListaClientes = new System.Windows.Forms.Label();
-            this.lblPerfil = new System.Windows.Forms.Label();
-            this.lblConfiguracoes = new System.Windows.Forms.Label();
-            this.lblAbrirChamado = new System.Windows.Forms.Label();
-            this.panelSelecionado = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,56 @@
             this.panelMenu.Size = new System.Drawing.Size(65, 530);
             this.panelMenu.TabIndex = 15;
             // 
+            // lblAbrirChamado
+            // 
+            this.lblAbrirChamado.AutoSize = true;
+            this.lblAbrirChamado.BackColor = System.Drawing.Color.White;
+            this.lblAbrirChamado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAbrirChamado.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbrirChamado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(166)))));
+            this.lblAbrirChamado.Location = new System.Drawing.Point(15, 103);
+            this.lblAbrirChamado.Name = "lblAbrirChamado";
+            this.lblAbrirChamado.Size = new System.Drawing.Size(34, 24);
+            this.lblAbrirChamado.TabIndex = 14;
+            this.lblAbrirChamado.Text = "record_voice_over";
+            this.lblAbrirChamado.Click += new System.EventHandler(this.lblAbrirChamado_Click);
+            // 
+            // lblConfiguracoes
+            // 
+            this.lblConfiguracoes.AutoSize = true;
+            this.lblConfiguracoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblConfiguracoes.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfiguracoes.ForeColor = System.Drawing.Color.White;
+            this.lblConfiguracoes.Location = new System.Drawing.Point(15, 435);
+            this.lblConfiguracoes.Name = "lblConfiguracoes";
+            this.lblConfiguracoes.Size = new System.Drawing.Size(34, 24);
+            this.lblConfiguracoes.TabIndex = 13;
+            this.lblConfiguracoes.Text = "settings";
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPerfil.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.ForeColor = System.Drawing.Color.White;
+            this.lblPerfil.Location = new System.Drawing.Point(15, 383);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(34, 24);
+            this.lblPerfil.TabIndex = 12;
+            this.lblPerfil.Text = "person";
+            // 
+            // lblListaClientes
+            // 
+            this.lblListaClientes.AutoSize = true;
+            this.lblListaClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblListaClientes.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaClientes.ForeColor = System.Drawing.Color.White;
+            this.lblListaClientes.Location = new System.Drawing.Point(15, 207);
+            this.lblListaClientes.Name = "lblListaClientes";
+            this.lblListaClientes.Size = new System.Drawing.Size(34, 24);
+            this.lblListaClientes.TabIndex = 11;
+            this.lblListaClientes.Text = "group";
+            // 
             // lblHistoricoChamado
             // 
             this.lblHistoricoChamado.AutoSize = true;
@@ -83,6 +133,7 @@
             this.lblHistoricoChamado.Size = new System.Drawing.Size(34, 24);
             this.lblHistoricoChamado.TabIndex = 0;
             this.lblHistoricoChamado.Text = "assignment";
+            this.lblHistoricoChamado.Click += new System.EventHandler(this.lblHistoricoChamado_Click);
             // 
             // lblSair
             // 
@@ -99,6 +150,14 @@
             this.lblSair.Text = "exit_to_app";
             this.lblSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
+            // 
+            // panelSelecionado
+            // 
+            this.panelSelecionado.BackgroundImage = global::solutions_desk.Properties.Resources.icone_selecionado;
+            this.panelSelecionado.Location = new System.Drawing.Point(8, 91);
+            this.panelSelecionado.Name = "panelSelecionado";
+            this.panelSelecionado.Size = new System.Drawing.Size(49, 49);
+            this.panelSelecionado.TabIndex = 15;
             // 
             // panel3
             // 
@@ -158,64 +217,6 @@
             this.lblNomeUsuarioLogado.Size = new System.Drawing.Size(39, 13);
             this.lblNomeUsuarioLogado.TabIndex = 16;
             this.lblNomeUsuarioLogado.Text = "Nome";
-            // 
-            // lblListaClientes
-            // 
-            this.lblListaClientes.AutoSize = true;
-            this.lblListaClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblListaClientes.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaClientes.ForeColor = System.Drawing.Color.White;
-            this.lblListaClientes.Location = new System.Drawing.Point(15, 207);
-            this.lblListaClientes.Name = "lblListaClientes";
-            this.lblListaClientes.Size = new System.Drawing.Size(34, 24);
-            this.lblListaClientes.TabIndex = 11;
-            this.lblListaClientes.Text = "group";
-            // 
-            // lblPerfil
-            // 
-            this.lblPerfil.AutoSize = true;
-            this.lblPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblPerfil.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.ForeColor = System.Drawing.Color.White;
-            this.lblPerfil.Location = new System.Drawing.Point(15, 383);
-            this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(34, 24);
-            this.lblPerfil.TabIndex = 12;
-            this.lblPerfil.Text = "person";
-            // 
-            // lblConfiguracoes
-            // 
-            this.lblConfiguracoes.AutoSize = true;
-            this.lblConfiguracoes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblConfiguracoes.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfiguracoes.ForeColor = System.Drawing.Color.White;
-            this.lblConfiguracoes.Location = new System.Drawing.Point(15, 435);
-            this.lblConfiguracoes.Name = "lblConfiguracoes";
-            this.lblConfiguracoes.Size = new System.Drawing.Size(34, 24);
-            this.lblConfiguracoes.TabIndex = 13;
-            this.lblConfiguracoes.Text = "settings";
-            // 
-            // lblAbrirChamado
-            // 
-            this.lblAbrirChamado.AutoSize = true;
-            this.lblAbrirChamado.BackColor = System.Drawing.Color.White;
-            this.lblAbrirChamado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAbrirChamado.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbrirChamado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(166)))));
-            this.lblAbrirChamado.Location = new System.Drawing.Point(15, 103);
-            this.lblAbrirChamado.Name = "lblAbrirChamado";
-            this.lblAbrirChamado.Size = new System.Drawing.Size(34, 24);
-            this.lblAbrirChamado.TabIndex = 14;
-            this.lblAbrirChamado.Text = "record_voice_over";
-            this.lblAbrirChamado.Click += new System.EventHandler(this.lblAbrirChamado_Click);
-            // 
-            // panelSelecionado
-            // 
-            this.panelSelecionado.BackgroundImage = global::solutions_desk.Properties.Resources.icone_selecionado;
-            this.panelSelecionado.Location = new System.Drawing.Point(8, 91);
-            this.panelSelecionado.Name = "panelSelecionado";
-            this.panelSelecionado.Size = new System.Drawing.Size(49, 49);
-            this.panelSelecionado.TabIndex = 15;
             // 
             // frmPrincipal
             // 

@@ -21,7 +21,7 @@ namespace SDClasses.Controller
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
-            cmd.CommandText = "SELECT * FROM MARCA;";
+            cmd.CommandText = "SELECT * FROM MARCAS;";
             cmd.Connection = cnn;
 
             List<string> marcas = new List<string>();
@@ -55,7 +55,7 @@ namespace SDClasses.Controller
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
-            cmd.CommandText = "SELECT * FROM MODELO;";
+            cmd.CommandText = "SELECT * FROM MODELOS;";
             cmd.Connection = cnn;
 
             List<string> modelos = new List<string>();

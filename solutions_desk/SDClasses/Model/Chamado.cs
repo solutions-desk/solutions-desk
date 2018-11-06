@@ -81,19 +81,45 @@ namespace SDClasses.Model
 
 
             cmd.CommandText =
-            "SELECT " +
-                "TOP(3) " +
-                "PK_CHAM AS 'ID_CHAMADO', " +
-                    "NUMERO_CHAM AS 'NUMERO'," +
+                 //"SELECT " +
+                 //    "CHAMADOS.PK_CHAM AS 'ID_CHAMADO', " +
+                 //    "NUMERO_CHAM AS 'NUMERO', " +
+                 //    "MENS_CHAM AS 'MENSAGEM', " +
+                 //    "DESC_CHAM AS 'DESCRICAO', " +
+                 //    "IDENTIFICACAO_EQUIP AS 'NUMERO_EQUIPAMENTO', " +
+                 //    "DATA_CHAM AS 'CRIADO_EM', " +
+                 //    "DATA_VENDA_EQUIP AS 'VENDIDO_EM', " +
+                 //    "DESC_MARCA AS 'MARCA', " +
+                 //    "DESC_MODELO AS 'MODELO', " +
+                 //    "EQUIPAMENTOS.PK_CLI AS 'ID_CLIENTE', " +
+                 //    "STS_OP_CHAM AS 'STATUS_CHAMADO', " +
+                 //    "PK_OP_CHAM AS 'ID_OPERADOR' " +
+                 //"FROM CHAMADOS " +
+                 //    "INNER JOIN EQUIPAMENTOS ON CHAMADOS.PK_EQUIP = EQUIPAMENTOS.PK_EQUIP " +
+                 //    "INNER JOIN MARCAS ON EQUIPAMENTOS.PK_MARCA = MARCAS.PK_MARCA " +
+                 //    "INNER JOIN MODELOS ON EQUIPAMENTOS.PK_MODELO = MODELOS.PK_MODELO " +
+                 //    "INNER JOIN OPERADORCHAMADOS ON CHAMADOS.PK_CHAM = OPERADORCHAMADOS.PK_CHAM " +
+                 //"ORDER BY CHAMADOS.PK_CHAM DESC;";
+                 "SELECT " +
+                    "CHAMADOS.PK_CHAM AS 'ID_CHAMADO', " +
+                    "NUMERO_CHAM AS 'NUMERO', " +
                     "MENS_CHAM AS 'MENSAGEM', " +
                     "DESC_CHAM AS 'DESCRICAO', " +
-                    "PK_CLI AS 'ID_CLIENTE', " +
+                    "IDENTIFICACAO_EQUIP AS 'NUMERO_EQUIPAMENTO', " +
+                    "DATA_CHAM AS 'CRIADO_EM', " +
+                    "DATA_VENDA_EQUIP AS 'VENDIDO_EM', " +
                     "DESC_MARCA AS 'MARCA', " +
-                    "DESC_MODELO AS 'MODELO' " +
-                "FROM CHAMADO " +
-                    "INNER JOIN MARCA ON CHAMADO.PK_MARCA = MARCA.PK_MARCA " +
-                    "INNER JOIN MODELO ON CHAMADO.PK_MODELO = MODELO.PK_MODELO " +
-                "ORDER BY PK_CHAM DESC";
+                    "DESC_MODELO AS 'MODELO', " +
+                    "EQUIPAMENTOS.PK_CLI AS 'ID_CLIENTE', " +
+                    "STS_OP_CHAM AS 'STATUS_CHAMADO', " +
+                    "PK_OP_CHAM AS 'ID_OPERADOR' " +
+                "FROM CHAMADOS " +
+                    "INNER JOIN EQUIPAMENTOS ON CHAMADOS.PK_EQUIP = EQUIPAMENTOS.PK_EQUIP " +
+                    "INNER JOIN MARCAS ON EQUIPAMENTOS.PK_MARCA = MARCAS.PK_MARCA " +
+                    "INNER JOIN MODELOS ON EQUIPAMENTOS.PK_MODELO = MODELOS.PK_MODELO " +
+                    "INNER JOIN OPERADORCHAMADOS ON CHAMADOS.PK_CHAM = OPERADORCHAMADOS.PK_CHAM " +
+                "ORDER BY CHAMADOS.PK_CHAM DESC;";
+
 
             cmd.Connection = cnn;
 

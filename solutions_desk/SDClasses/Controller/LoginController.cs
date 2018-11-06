@@ -56,7 +56,7 @@ namespace SDClasses.Controller
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
-            cmd.CommandText = "SELECT * FROM OPERADOR WHERE NUMCAD_OP = '" + operador.Login + "' AND SENHA_OP = " + operador.Senha;
+            cmd.CommandText = "SELECT * FROM OPERADORES WHERE NUMCAD_OP = '" + operador.Login + "' AND SENHA_OP = " + operador.Senha;
             cmd.Connection = cnn;
 
             try
