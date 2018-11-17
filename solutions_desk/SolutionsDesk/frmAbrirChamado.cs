@@ -16,19 +16,22 @@ namespace solutions_desk
     {
         private ChamadoController chamadoController = new ChamadoController();
         private Cliente clienteAtual = new Cliente();
+        private Operador operadorLogado;
 
-        public frmAbrirChamado(int largura, int altura)
+        public frmAbrirChamado(int largura, int altura, Operador pessoaLogada)
         {
             InitializeComponent();
 
             this.Width = largura;
             this.Height = altura;
 
-            this.carregarMarcas();
-            this.carregarModelos();
+            //this.carregarMarcas();
+            //this.carregarModelos();
             this.carregaChamadosRecentes();
+            operadorLogado = pessoaLogada;
 
-            
+
+
         }
         private void carregaChamadosRecentes()
         {
@@ -62,10 +65,8 @@ namespace solutions_desk
             }
 
         }
-        private void carregarMarcas()
-        {
-            List<string> marcas = new List<string>();
-            
+        private void carregarMarcas(List<string> marcas)
+        {            
             marcas = chamadoController.ObterMarcas();
 
             for (var i = 0; i < marcas.Count; i++)
@@ -76,9 +77,8 @@ namespace solutions_desk
 
         }
 
-        private void carregarModelos()
+        private void carregarModelos(List<string> modelos)
         {
-            List<string> modelos = new List<string>();
 
             modelos = chamadoController.ObterModelos();
 
@@ -98,15 +98,30 @@ namespace solutions_desk
 
         private void btnAbriChamado_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
+           
+
+            var isChamadoAberto = chamadoController.AbrirChamado(operadorLogado.IdOperador, new Chamado(
+                1,
+                comboMarcas.Text,
+                comboModelos.Text,
+                txtMensagemErro.Text,
+                txtDescricao.Text,
+                null,
+                "andamento",
+                clienteAtual
+            ));
+
+
+            if (isChamadoAberto)
+            {
+                MessageBox.Show("Chamado aberto com sucesso");
+            } else
+            {
+                MessageBox.Show("Não foi possível abrir o chamado");
+            }
+
+           
             
-            //Chamado chamado = new Chamado(
-            //    comboMarcas.Text,
-            //    comboModelos.Text,
-            //    txtMensagemErro.Text,
-            //    txtDescricao.Text,
-            //    cliente
-            //);
 
         }
 
@@ -121,6 +136,16 @@ namespace solutions_desk
                 if (equipamento.IdentificacaoEquipamento != null)
                 {
                     clienteAtual = clienteAtual.BuscarClientePorID(equipamento.IdCliente);
+                    List<string> modelos = new List<string>();
+                    List<string> marcas = new List<string>();
+
+                    modelos.Add(equipamento.Modelo);
+                    marcas.Add(equipamento.Marca);
+                    this.carregarModelos(modelos);
+                    this.carregarMarcas(marcas);
+
+                    txtTelefone.Text = clienteAtual.Telefone.Numero.ToString();
+
                 } else
                 {
                     MessageBox.Show("Nenhum equipamento foi encontrado com a identificacao: " + txtIdentificacao.Text + "", "Ops!");
@@ -129,6 +154,11 @@ namespace solutions_desk
                 
             }
             
+        }
+
+        private void txtIdentificacao_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

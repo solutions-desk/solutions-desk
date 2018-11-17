@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BancoSQL.cs" />
+    <Compile Include="Conexao.cs" />
     <Compile Include="Controller\ChamadoController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PessoaController.cs" />

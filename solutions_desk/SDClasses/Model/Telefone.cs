@@ -10,13 +10,17 @@ namespace SDClasses.Model
     {
         private int ddd;
         private int numero;
-        private String tipo;
+        private string tipo;
 
-        public Telefone(int ddd, int numero, String tipo)
+        public Telefone(int ddd, int numero, string tipo)
         {
             this.ddd = ddd;
             this.numero = numero;
             this.tipo = tipo;
         }
+
+        public int Ddd { get { return ddd; } set { ddd = value; } }
+        public int Numero { get { return numero; } set { numero = value; } }
+        public string Tipo { get { return tipo; } set { tipo = value; } }
     }
 }

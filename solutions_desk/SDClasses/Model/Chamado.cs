@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SDClasses.Model
 {
@@ -17,20 +14,32 @@ namespace SDClasses.Model
         private string comentario;
         private Cliente cliente;
         private string connectionString;
+        private string dataChamado;
+        private string status;
 
         public Chamado()
         {
            
         }
-        public Chamado(int numero, string marca, string modelo, string mensagem, string descricao, Cliente cliente)
+        public Chamado(int numero, string marca, string modelo, string mensagem, string descricao, string dataChamado, string status, Cliente cliente)
         {
-            this.numero = numero;
+
+            if (numero != null && numero != 0)
+            {
+                this.numero = numero;
+            }
             this.marca = marca;
             this.modelo = modelo;
             this.mensagem = mensagem;
             this.descricao = descricao;
+            if (dataChamado != null )
+            {
+                this.dataChamado = dataChamado;
+            }
+            this.status = status;
             this.cliente = cliente;
         }
+
 
         public int Numero
         {
@@ -63,17 +72,27 @@ namespace SDClasses.Model
             get { return this.comentario; }
             set { this.comentario = value; }
         }
+        public string DataChamado
+        {
+            get { return dataChamado; }
+            set { dataChamado = value; }
+        }
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
         public Cliente Cliente
         {
             get { return this.cliente; }
             set { this.Cliente = value; }
         }
 
-        public List<Chamado> obterChamado()
+        public List<Chamado> obterChamado(int total = 10)
         {
             List<Chamado> chamadosRecentes = new List<Chamado>();
-            
-            connectionString = @"Data Source=DESKTOP-QTSN2HH;Initial Catalog=HELPDESK;Integrated Security=TRUE";
+
+            Conexao conexao = new Conexao();
             SqlConnection cnn = new SqlConnection(connectionString);
 
             SqlCommand cmd = new SqlCommand();
@@ -81,26 +100,8 @@ namespace SDClasses.Model
 
 
             cmd.CommandText =
-                 //"SELECT " +
-                 //    "CHAMADOS.PK_CHAM AS 'ID_CHAMADO', " +
-                 //    "NUMERO_CHAM AS 'NUMERO', " +
-                 //    "MENS_CHAM AS 'MENSAGEM', " +
-                 //    "DESC_CHAM AS 'DESCRICAO', " +
-                 //    "IDENTIFICACAO_EQUIP AS 'NUMERO_EQUIPAMENTO', " +
-                 //    "DATA_CHAM AS 'CRIADO_EM', " +
-                 //    "DATA_VENDA_EQUIP AS 'VENDIDO_EM', " +
-                 //    "DESC_MARCA AS 'MARCA', " +
-                 //    "DESC_MODELO AS 'MODELO', " +
-                 //    "EQUIPAMENTOS.PK_CLI AS 'ID_CLIENTE', " +
-                 //    "STS_OP_CHAM AS 'STATUS_CHAMADO', " +
-                 //    "PK_OP_CHAM AS 'ID_OPERADOR' " +
-                 //"FROM CHAMADOS " +
-                 //    "INNER JOIN EQUIPAMENTOS ON CHAMADOS.PK_EQUIP = EQUIPAMENTOS.PK_EQUIP " +
-                 //    "INNER JOIN MARCAS ON EQUIPAMENTOS.PK_MARCA = MARCAS.PK_MARCA " +
-                 //    "INNER JOIN MODELOS ON EQUIPAMENTOS.PK_MODELO = MODELOS.PK_MODELO " +
-                 //    "INNER JOIN OPERADORCHAMADOS ON CHAMADOS.PK_CHAM = OPERADORCHAMADOS.PK_CHAM " +
-                 //"ORDER BY CHAMADOS.PK_CHAM DESC;";
                  "SELECT " +
+                    "TOP(" + total + ")" +
                     "CHAMADOS.PK_CHAM AS 'ID_CHAMADO', " +
                     "NUMERO_CHAM AS 'NUMERO', " +
                     "MENS_CHAM AS 'MENSAGEM', " +
@@ -121,11 +122,10 @@ namespace SDClasses.Model
                 "ORDER BY CHAMADOS.PK_CHAM DESC;";
 
 
-            cmd.Connection = cnn;
+            cmd.Connection = conexao.Conectar();
 
             try
             {
-                cnn.Open();
 
                 dr = cmd.ExecuteReader();
 
@@ -140,13 +140,15 @@ namespace SDClasses.Model
                             dr["MODELO"].ToString(),
                             dr["MENSAGEM"].ToString(),
                             dr["DESCRICAO"].ToString(),
+                            dr["CRIADO_EM"].ToString(),
+                            dr["STATUS_CHAMADO"].ToString(),
                             clienteChamado
                         )
                     );
                 }
 
 
-                cnn.Close();
+                conexao.Desconectar();
 
                 return chamadosRecentes;
 
@@ -156,6 +158,41 @@ namespace SDClasses.Model
             {
 
                 return chamadosRecentes;
+            }
+        }
+
+        public bool AbrirChamado(int idOperador, Chamado chamado)
+        {
+            Conexao conexao = new Conexao();
+            SqlCommand cmd = new SqlCommand();
+            
+            Equipamento equip = new Equipamento();
+            var idEquipamento = equip.ObterEquipamentoByIdCliente(chamado.Cliente.IdCliente);
+
+            cmd.CommandText =
+                "DECLARE @ultimoId INT; " +
+                "INSERT INTO CHAMADOS VALUES(" + chamado.Numero + ", '" + chamado.Mensagem + "', '" + chamado.Descricao + "', null, GETDATE(), " + chamado.Cliente.IdCliente + ", " + idEquipamento.IdEquipamento + "); " +
+                "SELECT @ultimoId = (SELECT SCOPE_IDENTITY()); " +
+                "INSERT INTO OPERADORCHAMADOS VALUES('aberto', " + idOperador + ", @ultimoId);";
+            cmd.Connection = conexao.Conectar();
+
+            try
+            {
+            
+                int i = cmd.ExecuteNonQuery();
+
+                if (i > 0)
+                {
+                    conexao.Desconectar();
+                    return true;
+                }
+                return false;
+
+            }
+            catch (Exception ex)
+            {
+                conexao.Desconectar();
+                return false;
             }
         }
     }

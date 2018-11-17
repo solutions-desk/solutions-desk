@@ -50,27 +50,29 @@ namespace SDClasses.Controller
 
         public Operador buscaUsuario(Operador operador)
         {
-            connectionString = @"Data Source=DESKTOP-QTSN2HH;Initial Catalog=HELPDESK;Integrated Security=TRUE";
-            SqlConnection cnn = new SqlConnection(connectionString);
+            
 
+            Conexao conexao = new Conexao();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
             cmd.CommandText = "SELECT * FROM OPERADORES WHERE NUMCAD_OP = '" + operador.Login + "' AND SENHA_OP = " + operador.Senha;
-            cmd.Connection = cnn;
-
+            cmd.Connection = conexao.Conectar();
+            
             try
             {
-                cnn.Open();
+                //cnn.Open();
+                //conexao.Conectar();
 
                 dr = cmd.ExecuteReader();
 
                 dr.Read();
                 operador.Nome = dr["NOME_OP"].ToString();
+                operador.IdOperador = Convert.ToInt32(dr["PK_OP"].ToString());
 
+                conexao.Desconectar();
                 return operador;
-
-                cnn.Close();
+                
 
             }
             catch (Exception ex)

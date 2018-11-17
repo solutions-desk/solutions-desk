@@ -8,16 +8,23 @@ namespace SDClasses.Model
 {
     public class Operador : Pessoa
     {
+        private int idOperador;
         private int cadastro;
         private Pessoa pessoa;
         private string login;
 
-        public Operador()
+        public int IdOperador
         {
-
-            
+            get { return idOperador; }
+            set { idOperador = value; }
         }
 
         public string Login { get; set; }
+
+        public Operador()
+        {
+   
+        }
+
     }
 }

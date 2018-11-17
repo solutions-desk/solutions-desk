@@ -81,42 +81,31 @@ namespace SDClasses.Controller
                 return modelos;
             }
         }
-        public Equipamento ObterEquipamento(string textoIdentificacao)
+        
+
+        public Equipamento ObterEquipamento(string identificacao)
         {
-            connectionString = @"Data Source=DESKTOP-QTSN2HH;Initial Catalog=HELPDESK;Integrated Security=TRUE";
-            SqlConnection cnn = new SqlConnection(connectionString);
+            Equipamento equip = new Equipamento();
 
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
+            return equip.ObterEquipamento(identificacao);
             
-            cmd.CommandText = "SELECT * FROM EQUIPAMENTOS WHERE IDENTIFICACAO_EQUIP = '" + textoIdentificacao + "';";
-            cmd.Connection = cnn;
+        }
 
-            Equipamento equipamento = new Equipamento();
-
-            try
+        public bool AbrirChamado(int idOperador, Chamado chamado)
+        {
+           
+            if (idOperador != 0 && idOperador != null)
             {
-                cnn.Open();
+                var retornoAberturaChamado = chamado.AbrirChamado(idOperador, chamado);
 
-                dr = cmd.ExecuteReader();
-
-                dr.Read();
-
-                equipamento.IdCliente = Convert.ToInt32(dr["PK_CLI"]);
-                equipamento.IdentificacaoEquipamento = dr["IDENTIFICACAO_EQUIP"].ToString();
-
-
-                cnn.Close();
-
-                return equipamento;
-
+                if (retornoAberturaChamado)
+                {
+                    return true;
+                }
 
             }
-            catch (Exception ex)
-            {
-
-                return equipamento;
-            }
+            return false;
+            
         }
     }
 }

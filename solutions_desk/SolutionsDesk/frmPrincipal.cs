@@ -17,13 +17,17 @@ namespace solutions_desk
         private bool mouseDown;
         private Point lastLocation;
         private frmLogin telaLogin;
-        private Pessoa pessoa;
+        private Operador pessoaLogada;
 
-        public frmPrincipal(frmLogin login, Pessoa pessoaLogada)
+        public Operador PessoaLogada
+        {
+            get { return pessoaLogada; }
+        }
+        public frmPrincipal(frmLogin login, Operador pessoaLogada)
         {
             InitializeComponent();
             this.telaLogin = login;
-            pessoa = pessoaLogada;
+            this.pessoaLogada = pessoaLogada;
         }
 
         private void btnCloseForm_Click(object sender, EventArgs e)
@@ -34,7 +38,7 @@ namespace solutions_desk
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             this.organizarMenu();
-            lblNomeUsuarioLogado.Text = this.pessoa.Nome;
+            //lblNomeUsuarioLogado.Text = this.pessoaLogada.Nome;
         }
 
         public void organizarMenu()
@@ -120,7 +124,7 @@ namespace solutions_desk
         private void lblAbrirChamadoIcone_Click(object sender, EventArgs e)
         {
             panelPai.Controls.Clear();
-            frmAbrirChamado frmAbrirChamado = new frmAbrirChamado(panelPai.Width, panelPai.Height);
+            frmAbrirChamado frmAbrirChamado = new frmAbrirChamado(panelPai.Width, panelPai.Height, pessoaLogada);
             frmAbrirChamado.TopLevel = false;
             panelPai.Controls.Add(frmAbrirChamado);
             frmAbrirChamado.Show();
@@ -137,7 +141,7 @@ namespace solutions_desk
         private void lblAbrirChamado_Click(object sender, EventArgs e)
         {
             panelPai.Controls.Clear();
-            frmAbrirChamado frmAbrirChamado = new frmAbrirChamado(panelPai.Width, panelPai.Height);
+            frmAbrirChamado frmAbrirChamado = new frmAbrirChamado(panelPai.Width, panelPai.Height, pessoaLogada);
             frmAbrirChamado.TopLevel = false;
             panelPai.Controls.Add(frmAbrirChamado);
             frmAbrirChamado.Show();
