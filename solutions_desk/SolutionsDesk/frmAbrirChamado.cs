@@ -37,13 +37,13 @@ namespace solutions_desk
         {
 
             List<Chamado> todoChamadosRecentes = new List<Chamado>();
-            todoChamadosRecentes = new Chamado().obterChamado();
+            todoChamadosRecentes = new Chamado().obterChamado(3);
             int indexChamadosRecentes = 1;
             var lastPositionItemChamado = new Point(16, 120);
 
             foreach(var chamado in todoChamadosRecentes)
             {   
-                var itemChamado = new UCchamados(chamado.Numero, "encerrado", "00/00/0000", chamado.Cliente.Nome );
+                var itemChamado = new UCchamados(chamado.Numero, chamado.Status, chamado.DataChamado, chamado.Cliente.Nome );
 
                 if (indexChamadosRecentes == 1)
                 {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SDClasses.Model;
 
 namespace solutions_desk.UserControls
 {
@@ -78,6 +79,46 @@ namespace solutions_desk.UserControls
         {
             get { return lblData.Text; }
             set { lblData.Text = value; }
+        }
+
+        private void UCchamados_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblNomeCliente_Click(object sender, EventArgs e)
+        {
+            base.OnClick(e);
+        }
+
+        private void lblCliente_Click(object sender, EventArgs e)
+        {
+            base.OnClick(e);
+        }
+
+        private void lblNumeroChamado_Click(object sender, EventArgs e)
+        {
+            base.OnClick(e);
+        }
+
+        private void lblNumero_Click(object sender, EventArgs e)
+        {
+            base.OnClick(e);
+        }
+
+        private void lblAbertoEm_Click(object sender, EventArgs e)
+        {
+            base.OnClick(e);
+        }
+
+        private void lblData_Click(object sender, EventArgs e)
+        {
+            base.OnClick(e);
+        }
+
+        private void panelStatus_Click(object sender, EventArgs e)
+        {
+            base.OnClick(e);
         }
     }
 }

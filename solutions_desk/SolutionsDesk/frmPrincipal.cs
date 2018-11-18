@@ -151,7 +151,7 @@ namespace solutions_desk
         private void lblHistoricoChamado_Click(object sender, EventArgs e)
         {
             panelPai.Controls.Clear();
-            frmHistoricoChamado frmHistoricoChamado = new frmHistoricoChamado();
+            frmHistoricoChamado frmHistoricoChamado = new frmHistoricoChamado(panelPai);
             frmHistoricoChamado.TopLevel = false;
             panelPai.Controls.Add(frmHistoricoChamado);
             frmHistoricoChamado.Show();

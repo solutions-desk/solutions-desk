@@ -139,29 +139,41 @@
   <data name="minimizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo-completo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-completo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fechar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fechar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="configuracao2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configuracao2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="configuracao1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\configuracao1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone_selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone_selecionado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="call1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\call1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimizar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="griaule1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\griaule1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuracao1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\configuracao1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Roboto_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fonts\Roboto-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="griaule2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\griaule2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ticket1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticket1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaterialIcons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaterialIcons.TTF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="catraca2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\catraca2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +184,8 @@
   <data name="tags1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tags1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="griaule1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\griaule1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimizar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ticket2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticket2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,16 +196,7 @@
   <data name="catraca1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\catraca1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo-completo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-completo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Roboto_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Roboto-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MaterialIcons" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MaterialIcons.TTF;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="icone_selecionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone_selecionado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg-item-chamado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg-item-chamado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -44,6 +44,7 @@
             this.panelStatus.Name = "panelStatus";
             this.panelStatus.Size = new System.Drawing.Size(8, 70);
             this.panelStatus.TabIndex = 0;
+            this.panelStatus.Click += new System.EventHandler(this.panelStatus_Click);
             // 
             // lblNumero
             // 
@@ -53,6 +54,7 @@
             this.lblNumero.Size = new System.Drawing.Size(22, 13);
             this.lblNumero.TabIndex = 1;
             this.lblNumero.Text = "Nº:";
+            this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
             // 
             // lblNumeroChamado
             // 
@@ -63,6 +65,7 @@
             this.lblNumeroChamado.Size = new System.Drawing.Size(14, 13);
             this.lblNumeroChamado.TabIndex = 2;
             this.lblNumeroChamado.Text = "0";
+            this.lblNumeroChamado.Click += new System.EventHandler(this.lblNumeroChamado_Click);
             // 
             // lblCliente
             // 
@@ -72,6 +75,7 @@
             this.lblCliente.Size = new System.Drawing.Size(42, 13);
             this.lblCliente.TabIndex = 3;
             this.lblCliente.Text = "Cliente:";
+            this.lblCliente.Click += new System.EventHandler(this.lblCliente_Click);
             // 
             // lblNomeCliente
             // 
@@ -82,6 +86,7 @@
             this.lblNomeCliente.Size = new System.Drawing.Size(96, 13);
             this.lblNomeCliente.TabIndex = 4;
             this.lblNomeCliente.Text = "Nome do fulano";
+            this.lblNomeCliente.Click += new System.EventHandler(this.lblNomeCliente_Click);
             // 
             // lblAbertoEm
             // 
@@ -91,6 +96,7 @@
             this.lblAbertoEm.Size = new System.Drawing.Size(58, 13);
             this.lblAbertoEm.TabIndex = 5;
             this.lblAbertoEm.Text = "Aberto em:";
+            this.lblAbertoEm.Click += new System.EventHandler(this.lblAbertoEm_Click);
             // 
             // lblData
             // 
@@ -101,21 +107,25 @@
             this.lblData.Size = new System.Drawing.Size(75, 13);
             this.lblData.TabIndex = 6;
             this.lblData.Text = "00/00/0000";
+            this.lblData.Click += new System.EventHandler(this.lblData_Click);
             // 
             // UCchamados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.lblAbertoEm);
             this.Controls.Add(this.lblNomeCliente);
             this.Controls.Add(this.lblCliente);
-            this.Controls.Add(this.lblNumeroChamado);
             this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.lblNumeroChamado);
             this.Controls.Add(this.panelStatus);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCchamados";
-            this.Size = new System.Drawing.Size(216, 70);
+            this.Size = new System.Drawing.Size(214, 68);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.UCchamados_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -73,3 +73,4 @@ C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\bin\Debug\MaterialSkin.dll
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmAbrirChamado.resources
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmHistoricoChamado.resources
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.UserControls.UCchamados.resources
+C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmDetalheChamado.resources

@@ -63,6 +63,16 @@ namespace solutions_desk.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_item_chamado {
+            get {
+                object obj = ResourceManager.GetObject("bg-item-chamado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap call1 {
             get {
                 object obj = ResourceManager.GetObject("call1", resourceCulture);

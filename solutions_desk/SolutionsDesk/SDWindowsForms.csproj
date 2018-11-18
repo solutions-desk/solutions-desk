@@ -77,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDetalheChamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalheChamado.Designer.cs">
+      <DependentUpon>frmDetalheChamado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHistoricoChamado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="UserControls\UCchamados.Designer.cs">
       <DependentUpon>UCchamados.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmDetalheChamado.resx">
+      <DependentUpon>frmDetalheChamado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHistoricoChamado.resx">
       <DependentUpon>frmHistoricoChamado.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +309,7 @@
     <None Include="Resources\logo.PNG" />
     <None Include="Resources\logo-completo.PNG" />
     <None Include="Resources\icone_selecionado.png" />
+    <None Include="Resources\bg-item-chamado.png" />
     <Content Include="_evo_ico.ico" />
   </ItemGroup>
   <ItemGroup>
