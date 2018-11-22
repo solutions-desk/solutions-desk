@@ -37,19 +37,22 @@
             this.lblListaClientes = new System.Windows.Forms.Label();
             this.lblHistoricoChamado = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.panelSelecionado = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblNomeUsuarioLogado = new System.Windows.Forms.Label();
             this.btnMinimizeForm = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.lblNomeUsuarioLogado = new System.Windows.Forms.Label();
+            this.panelSelecionado = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelPai.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPai
             // 
-            this.panelPai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panelPai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelPai.Controls.Add(this.label1);
             this.panelPai.Location = new System.Drawing.Point(66, 30);
             this.panelPai.Name = "panelPai";
             this.panelPai.Size = new System.Drawing.Size(913, 499);
@@ -151,14 +154,6 @@
             this.lblSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
-            // panelSelecionado
-            // 
-            this.panelSelecionado.BackgroundImage = global::solutions_desk.Properties.Resources.icone_selecionado;
-            this.panelSelecionado.Location = new System.Drawing.Point(8, 91);
-            this.panelSelecionado.Name = "panelSelecionado";
-            this.panelSelecionado.Size = new System.Drawing.Size(49, 49);
-            this.panelSelecionado.TabIndex = 15;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -166,6 +161,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(65, 85);
             this.panel3.TabIndex = 9;
+            // 
+            // lblNomeUsuarioLogado
+            // 
+            this.lblNomeUsuarioLogado.AutoSize = true;
+            this.lblNomeUsuarioLogado.Font = new System.Drawing.Font("Roboto Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuarioLogado.Location = new System.Drawing.Point(71, 6);
+            this.lblNomeUsuarioLogado.Name = "lblNomeUsuarioLogado";
+            this.lblNomeUsuarioLogado.Size = new System.Drawing.Size(110, 18);
+            this.lblNomeUsuarioLogado.TabIndex = 16;
+            this.lblNomeUsuarioLogado.Text = "Solutions Desk";
             // 
             // btnMinimizeForm
             // 
@@ -207,16 +212,24 @@
             this.imgLogo.Size = new System.Drawing.Size(44, 30);
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
+            this.imgLogo.Click += new System.EventHandler(this.imgLogo_Click);
             // 
-            // lblNomeUsuarioLogado
+            // panelSelecionado
             // 
-            this.lblNomeUsuarioLogado.AutoSize = true;
-            this.lblNomeUsuarioLogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeUsuarioLogado.Location = new System.Drawing.Point(369, 4);
-            this.lblNomeUsuarioLogado.Name = "lblNomeUsuarioLogado";
-            this.lblNomeUsuarioLogado.Size = new System.Drawing.Size(39, 13);
-            this.lblNomeUsuarioLogado.TabIndex = 16;
-            this.lblNomeUsuarioLogado.Text = "Nome";
+            this.panelSelecionado.BackgroundImage = global::solutions_desk.Properties.Resources.icone_selecionado;
+            this.panelSelecionado.Location = new System.Drawing.Point(8, 91);
+            this.panelSelecionado.Name = "panelSelecionado";
+            this.panelSelecionado.Size = new System.Drawing.Size(49, 49);
+            this.panelSelecionado.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(389, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CARREGANDO...";
             // 
             // frmPrincipal
             // 
@@ -241,6 +254,8 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseUp);
+            this.panelPai.ResumeLayout(false);
+            this.panelPai.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
@@ -265,6 +280,7 @@
         private System.Windows.Forms.Label lblListaClientes;
         private System.Windows.Forms.Label lblAbrirChamado;
         private System.Windows.Forms.Panel panelSelecionado;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -38,7 +38,18 @@ namespace solutions_desk
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             this.organizarMenu();
+            this.carregaTelaBemVindo();
             //lblNomeUsuarioLogado.Text = this.pessoaLogada.Nome;
+        }
+
+        public void carregaTelaBemVindo()
+        {
+            panelPai.Controls.Clear();
+            frmHome frmHome= new frmHome(pessoaLogada);
+            frmHome.TopLevel = false;
+            panelPai.Controls.Add(frmHome);
+            frmHome.Show();
+            frmHome.BringToFront();
         }
 
         public void organizarMenu()
@@ -156,6 +167,11 @@ namespace solutions_desk
             panelPai.Controls.Add(frmHistoricoChamado);
             frmHistoricoChamado.Show();
             frmHistoricoChamado.BringToFront();
+        }
+
+        private void imgLogo_Click(object sender, EventArgs e)
+        {
+            this.carregaTelaBemVindo();
         }
     }
 }

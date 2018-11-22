@@ -36,21 +36,18 @@
             this.comboModelos = new System.Windows.Forms.ComboBox();
             this.comboMarcas = new System.Windows.Forms.ComboBox();
             this.btnAbriChamado = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtMensagemErro = new solutions_desk.PlaceHolderTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtTelefone = new solutions_desk.PlaceHolderTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtIdentificacao = new solutions_desk.PlaceHolderTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtMensagemErro = new solutions_desk.PlaceHolderTextBox();
-            this.txtTelefone = new solutions_desk.PlaceHolderTextBox();
-            this.txtIdentificacao = new solutions_desk.PlaceHolderTextBox();
             this.panelAcesso.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -114,10 +111,7 @@
             this.panel1.Controls.Add(this.comboModelos);
             this.panel1.Controls.Add(this.comboMarcas);
             this.panel1.Controls.Add(this.btnAbriChamado);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtDescricao);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtMensagemErro);
@@ -131,7 +125,6 @@
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Location = new System.Drawing.Point(250, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.panel1.Size = new System.Drawing.Size(431, 424);
             this.panel1.TabIndex = 1;
             // 
@@ -160,7 +153,7 @@
             this.btnAbriChamado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(74)))), ((int)(((byte)(162)))));
             this.btnAbriChamado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbriChamado.ForeColor = System.Drawing.Color.White;
-            this.btnAbriChamado.Location = new System.Drawing.Point(21, 483);
+            this.btnAbriChamado.Location = new System.Drawing.Point(24, 369);
             this.btnAbriChamado.Name = "btnAbriChamado";
             this.btnAbriChamado.Padding = new System.Windows.Forms.Padding(10);
             this.btnAbriChamado.Size = new System.Drawing.Size(168, 41);
@@ -169,46 +162,16 @@
             this.btnAbriChamado.UseVisualStyleBackColor = false;
             this.btnAbriChamado.Click += new System.EventHandler(this.btnAbriChamado_Click);
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(24, 449);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(129, 17);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "Acompanhar via SMS";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(24, 426);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 17);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Ser atualizado por e-mail";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.label9.Location = new System.Drawing.Point(21, 358);
+            this.label9.Location = new System.Drawing.Point(21, 331);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 15);
             this.label9.TabIndex = 16;
             this.label9.Text = "Campos obrigatórios(*)";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 396);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 18);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Notificações";
             // 
             // txtDescricao
             // 
@@ -216,7 +179,7 @@
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescricao.Location = new System.Drawing.Point(24, 274);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(380, 81);
+            this.txtDescricao.Size = new System.Drawing.Size(380, 54);
             this.txtDescricao.TabIndex = 14;
             this.txtDescricao.Text = "";
             // 
@@ -230,6 +193,19 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Descrição*";
             // 
+            // txtMensagemErro
+            // 
+            this.txtMensagemErro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
+            this.txtMensagemErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.txtMensagemErro.ForeColor = System.Drawing.Color.Gray;
+            this.txtMensagemErro.IsSenha = false;
+            this.txtMensagemErro.Location = new System.Drawing.Point(178, 214);
+            this.txtMensagemErro.Name = "txtMensagemErro";
+            this.txtMensagemErro.PlaceHolderText = "Digite a mensagem de erro";
+            this.txtMensagemErro.Size = new System.Drawing.Size(226, 26);
+            this.txtMensagemErro.TabIndex = 10;
+            this.txtMensagemErro.Text = "Digite a mensagem de erro";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -239,6 +215,20 @@
             this.label5.Size = new System.Drawing.Size(133, 18);
             this.label5.TabIndex = 9;
             this.label5.Text = "Mensagem de erro";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
+            this.txtTelefone.Enabled = false;
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.txtTelefone.ForeColor = System.Drawing.Color.Gray;
+            this.txtTelefone.IsSenha = false;
+            this.txtTelefone.Location = new System.Drawing.Point(24, 214);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.PlaceHolderText = "(xx) xxxxx-xxxx";
+            this.txtTelefone.Size = new System.Drawing.Size(135, 26);
+            this.txtTelefone.TabIndex = 8;
+            this.txtTelefone.Text = "(xx) xxxxx-xxxx";
             // 
             // label4
             // 
@@ -270,6 +260,20 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Marca*";
             // 
+            // txtIdentificacao
+            // 
+            this.txtIdentificacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
+            this.txtIdentificacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
+            this.txtIdentificacao.ForeColor = System.Drawing.Color.Gray;
+            this.txtIdentificacao.IsSenha = false;
+            this.txtIdentificacao.Location = new System.Drawing.Point(24, 99);
+            this.txtIdentificacao.Name = "txtIdentificacao";
+            this.txtIdentificacao.PlaceHolderText = "Digite a identificação do equipamento";
+            this.txtIdentificacao.Size = new System.Drawing.Size(294, 26);
+            this.txtIdentificacao.TabIndex = 2;
+            this.txtIdentificacao.Text = "Digite a identificação do equipamento";
+            this.txtIdentificacao.Leave += new System.EventHandler(this.txtIdentificacao_Leave);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -289,48 +293,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(157, 25);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Abrir Chamado";
-            // 
-            // txtMensagemErro
-            // 
-            this.txtMensagemErro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
-            this.txtMensagemErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.txtMensagemErro.ForeColor = System.Drawing.Color.Gray;
-            this.txtMensagemErro.IsSenha = false;
-            this.txtMensagemErro.Location = new System.Drawing.Point(178, 214);
-            this.txtMensagemErro.Name = "txtMensagemErro";
-            this.txtMensagemErro.PlaceHolderText = "Digite a mensagem de erro";
-            this.txtMensagemErro.Size = new System.Drawing.Size(226, 26);
-            this.txtMensagemErro.TabIndex = 10;
-            this.txtMensagemErro.Text = "Digite a mensagem de erro";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
-            this.txtTelefone.Enabled = false;
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.txtTelefone.ForeColor = System.Drawing.Color.Gray;
-            this.txtTelefone.IsSenha = false;
-            this.txtTelefone.Location = new System.Drawing.Point(24, 214);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.PlaceHolderText = "(xx) xxxxx-xxxx";
-            this.txtTelefone.Size = new System.Drawing.Size(135, 26);
-            this.txtTelefone.TabIndex = 8;
-            this.txtTelefone.Text = "(xx) xxxxx-xxxx";
-            // 
-            // txtIdentificacao
-            // 
-            this.txtIdentificacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
-            this.txtIdentificacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F);
-            this.txtIdentificacao.ForeColor = System.Drawing.Color.Gray;
-            this.txtIdentificacao.IsSenha = false;
-            this.txtIdentificacao.Location = new System.Drawing.Point(24, 99);
-            this.txtIdentificacao.Name = "txtIdentificacao";
-            this.txtIdentificacao.PlaceHolderText = "Digite a identificação do equipamento";
-            this.txtIdentificacao.Size = new System.Drawing.Size(294, 26);
-            this.txtIdentificacao.TabIndex = 2;
-            this.txtIdentificacao.Text = "Digite a identificação do equipamento";
-            this.txtIdentificacao.TextChanged += new System.EventHandler(this.txtIdentificacao_TextChanged);
-            this.txtIdentificacao.Leave += new System.EventHandler(this.txtIdentificacao_Leave);
             // 
             // frmAbrirChamado
             // 
@@ -371,10 +333,7 @@
         private PlaceHolderTextBox txtTelefone;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox txtDescricao;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAbriChamado;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;

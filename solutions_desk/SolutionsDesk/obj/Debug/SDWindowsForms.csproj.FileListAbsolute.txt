@@ -74,3 +74,4 @@ C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.fr
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmHistoricoChamado.resources
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.UserControls.UCchamados.resources
 C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmDetalheChamado.resources
+C:\Projetos\PIM\PROJETO\solutions_desk\SolutionsDesk\obj\Debug\solutions_desk.frmHome.resources

@@ -21,6 +21,8 @@ namespace solutions_desk
             InitializeComponent();
             this.carregaChamados();
             this.panelPai = panelPai;
+            this.Width = panelPai.Width;
+            this.Height = panelPai.Height;
 
 
         }
@@ -30,9 +32,7 @@ namespace solutions_desk
             List<Chamado> todosChamados = new List<Chamado>();
             todosChamados = new Chamado().obterChamado();
             int indexChamadosRecentes = 1;
-            var lastPositionItemChamado = new Point(40, 69);
-            
-
+            var lastPositionItemChamado = new Point(100, 120);
             
             var index = 0;
             foreach (var chamado in todosChamados)
@@ -45,10 +45,9 @@ namespace solutions_desk
                 }
                 else
                 {
-
                     if (index % 3 == 0)
                     {
-                        lastPositionItemChamado.X = 40;
+                        lastPositionItemChamado.X = 100;
                         itemChamado.Location = new Point(lastPositionItemChamado.X, lastPositionItemChamado.Y + itemChamado.Height + 16);
                         lastPositionItemChamado = itemChamado.Location;
 
@@ -74,7 +73,7 @@ namespace solutions_desk
         public void ClickItemChamado(Chamado chamado)
         {
             panelPai.Controls.Clear();
-            frmDetalheChamado frmDetalheChamado = new frmDetalheChamado(chamado);
+            frmDetalheChamado frmDetalheChamado = new frmDetalheChamado(chamado, panelPai, this);
             frmDetalheChamado.TopLevel = false;
             panelPai.Controls.Add(frmDetalheChamado);
             frmDetalheChamado.Show();
@@ -82,6 +81,11 @@ namespace solutions_desk
         }
 
         private void frmHistoricoChamado_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
