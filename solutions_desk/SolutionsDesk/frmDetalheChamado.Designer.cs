@@ -62,11 +62,11 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblNomeCliente = new System.Windows.Forms.Label();
             this.panelMudarStatusChamado = new System.Windows.Forms.Panel();
+            this.lblCancelado = new System.Windows.Forms.Label();
+            this.lblAtraso = new System.Windows.Forms.Label();
+            this.lblAndamento = new System.Windows.Forms.Label();
             this.lblProcessoTecnico = new System.Windows.Forms.Label();
             this.lblEncerrado = new System.Windows.Forms.Label();
-            this.lblAndamento = new System.Windows.Forms.Label();
-            this.lblAtraso = new System.Windows.Forms.Label();
-            this.lblCancelado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -314,10 +314,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(15, 280);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(127, 20);
+            this.label10.Size = new System.Drawing.Size(118, 19);
             this.label10.TabIndex = 51;
             this.label10.Text = "COMENTÁRIOS";
             // 
@@ -344,10 +344,10 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblDescricao.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblDescricao.Location = new System.Drawing.Point(14, 217);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(268, 20);
+            this.lblDescricao.Size = new System.Drawing.Size(252, 19);
             this.lblDescricao.TabIndex = 48;
             this.lblDescricao.Text = "LOREM IPSUM DOLLOR SIT AMET";
             // 
@@ -364,10 +364,10 @@
             // lblMensagemErro
             // 
             this.lblMensagemErro.AutoSize = true;
-            this.lblMensagemErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblMensagemErro.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblMensagemErro.Location = new System.Drawing.Point(14, 158);
             this.lblMensagemErro.Name = "lblMensagemErro";
-            this.lblMensagemErro.Size = new System.Drawing.Size(268, 20);
+            this.lblMensagemErro.Size = new System.Drawing.Size(252, 19);
             this.lblMensagemErro.TabIndex = 46;
             this.lblMensagemErro.Text = "LOREM IPSUM DOLLOR SIT AMET";
             // 
@@ -384,10 +384,10 @@
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblEndereco.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblEndereco.Location = new System.Drawing.Point(93, 86);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(112, 20);
+            this.lblEndereco.Size = new System.Drawing.Size(110, 19);
             this.lblEndereco.TabIndex = 43;
             this.lblEndereco.Text = "Rua das flores";
             // 
@@ -404,10 +404,10 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(71, 61);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(77, 20);
+            this.lblEmail.Size = new System.Drawing.Size(76, 19);
             this.lblEmail.TabIndex = 41;
             this.lblEmail.Text = "a@a.com";
             // 
@@ -424,10 +424,10 @@
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblTelefone.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblTelefone.Location = new System.Drawing.Point(89, 36);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(102, 20);
+            this.lblTelefone.Size = new System.Drawing.Size(93, 19);
             this.lblTelefone.TabIndex = 39;
             this.lblTelefone.Text = "XXXX-XXXX";
             // 
@@ -444,10 +444,10 @@
             // lblNomeCliente
             // 
             this.lblNomeCliente.AutoSize = true;
-            this.lblNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblNomeCliente.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblNomeCliente.Location = new System.Drawing.Point(68, 11);
             this.lblNomeCliente.Name = "lblNomeCliente";
-            this.lblNomeCliente.Size = new System.Drawing.Size(56, 20);
+            this.lblNomeCliente.Size = new System.Drawing.Size(54, 19);
             this.lblNomeCliente.TabIndex = 37;
             this.lblNomeCliente.Text = "NOME";
             // 
@@ -464,6 +464,51 @@
             this.panelMudarStatusChamado.Size = new System.Drawing.Size(200, 213);
             this.panelMudarStatusChamado.TabIndex = 39;
             this.panelMudarStatusChamado.Visible = false;
+            // 
+            // lblCancelado
+            // 
+            this.lblCancelado.AutoSize = true;
+            this.lblCancelado.BackColor = System.Drawing.Color.White;
+            this.lblCancelado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCancelado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblCancelado.Location = new System.Drawing.Point(0, 165);
+            this.lblCancelado.Name = "lblCancelado";
+            this.lblCancelado.Padding = new System.Windows.Forms.Padding(16, 8, 101, 8);
+            this.lblCancelado.Size = new System.Drawing.Size(201, 35);
+            this.lblCancelado.TabIndex = 4;
+            this.lblCancelado.Text = "Cancelado";
+            this.lblCancelado.MouseEnter += new System.EventHandler(this.lblCancelado_MouseEnter);
+            this.lblCancelado.MouseLeave += new System.EventHandler(this.lblCancelado_MouseLeave);
+            // 
+            // lblAtraso
+            // 
+            this.lblAtraso.AutoSize = true;
+            this.lblAtraso.BackColor = System.Drawing.Color.White;
+            this.lblAtraso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAtraso.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblAtraso.Location = new System.Drawing.Point(0, 127);
+            this.lblAtraso.Name = "lblAtraso";
+            this.lblAtraso.Padding = new System.Windows.Forms.Padding(16, 8, 128, 8);
+            this.lblAtraso.Size = new System.Drawing.Size(199, 35);
+            this.lblAtraso.TabIndex = 3;
+            this.lblAtraso.Text = "Atraso";
+            this.lblAtraso.MouseEnter += new System.EventHandler(this.lblAtraso_MouseEnter);
+            this.lblAtraso.MouseLeave += new System.EventHandler(this.lblAtraso_MouseLeave);
+            // 
+            // lblAndamento
+            // 
+            this.lblAndamento.AutoSize = true;
+            this.lblAndamento.BackColor = System.Drawing.Color.White;
+            this.lblAndamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAndamento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblAndamento.Location = new System.Drawing.Point(0, 89);
+            this.lblAndamento.Name = "lblAndamento";
+            this.lblAndamento.Padding = new System.Windows.Forms.Padding(16, 8, 91, 8);
+            this.lblAndamento.Size = new System.Drawing.Size(198, 35);
+            this.lblAndamento.TabIndex = 2;
+            this.lblAndamento.Text = "Andamento";
+            this.lblAndamento.MouseEnter += new System.EventHandler(this.lblAndamento_MouseEnter);
+            this.lblAndamento.MouseLeave += new System.EventHandler(this.lblAndamento_MouseLeave);
             // 
             // lblProcessoTecnico
             // 
@@ -497,51 +542,6 @@
             this.lblEncerrado.Text = "Encerrado";
             this.lblEncerrado.MouseEnter += new System.EventHandler(this.lblEncerrado_MouseEnter);
             this.lblEncerrado.MouseLeave += new System.EventHandler(this.lblEncerrado_MouseLeave);
-            // 
-            // lblAndamento
-            // 
-            this.lblAndamento.AutoSize = true;
-            this.lblAndamento.BackColor = System.Drawing.Color.White;
-            this.lblAndamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAndamento.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblAndamento.Location = new System.Drawing.Point(0, 89);
-            this.lblAndamento.Name = "lblAndamento";
-            this.lblAndamento.Padding = new System.Windows.Forms.Padding(16, 8, 91, 8);
-            this.lblAndamento.Size = new System.Drawing.Size(198, 35);
-            this.lblAndamento.TabIndex = 2;
-            this.lblAndamento.Text = "Andamento";
-            this.lblAndamento.MouseEnter += new System.EventHandler(this.lblAndamento_MouseEnter);
-            this.lblAndamento.MouseLeave += new System.EventHandler(this.lblAndamento_MouseLeave);
-            // 
-            // lblAtraso
-            // 
-            this.lblAtraso.AutoSize = true;
-            this.lblAtraso.BackColor = System.Drawing.Color.White;
-            this.lblAtraso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAtraso.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblAtraso.Location = new System.Drawing.Point(0, 127);
-            this.lblAtraso.Name = "lblAtraso";
-            this.lblAtraso.Padding = new System.Windows.Forms.Padding(16, 8, 128, 8);
-            this.lblAtraso.Size = new System.Drawing.Size(199, 35);
-            this.lblAtraso.TabIndex = 3;
-            this.lblAtraso.Text = "Atraso";
-            this.lblAtraso.MouseEnter += new System.EventHandler(this.lblAtraso_MouseEnter);
-            this.lblAtraso.MouseLeave += new System.EventHandler(this.lblAtraso_MouseLeave);
-            // 
-            // lblCancelado
-            // 
-            this.lblCancelado.AutoSize = true;
-            this.lblCancelado.BackColor = System.Drawing.Color.White;
-            this.lblCancelado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCancelado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblCancelado.Location = new System.Drawing.Point(0, 165);
-            this.lblCancelado.Name = "lblCancelado";
-            this.lblCancelado.Padding = new System.Windows.Forms.Padding(16, 8, 101, 8);
-            this.lblCancelado.Size = new System.Drawing.Size(201, 35);
-            this.lblCancelado.TabIndex = 4;
-            this.lblCancelado.Text = "Cancelado";
-            this.lblCancelado.MouseEnter += new System.EventHandler(this.lblCancelado_MouseEnter);
-            this.lblCancelado.MouseLeave += new System.EventHandler(this.lblCancelado_MouseLeave);
             // 
             // frmDetalheChamado
             // 

@@ -81,7 +81,6 @@ namespace SDClasses.Controller
                 return modelos;
             }
         }
-        
 
         public Equipamento ObterEquipamento(string identificacao)
         {

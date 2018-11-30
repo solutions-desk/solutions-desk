@@ -37,7 +37,9 @@ namespace solutions_desk
             lblNomeCliente.Text = chamado.Cliente.Nome;
             lblTelefone.Text = chamado.Cliente.Telefone.Numero.ToString();
             lblEmail.Text = chamado.Cliente.Email;
-            
+            lblMensagemErro.Text = chamado.Mensagem;
+            lblDescricao.Text = chamado.Descricao;
+
 
             switch (chamado.Status)
             {

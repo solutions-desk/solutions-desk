@@ -1,6 +1,6 @@
 ﻿namespace solutions_desk
 {
-    partial class frmTags
+    partial class frmOperadorCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -34,27 +34,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 9.75F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.label1.Location = new System.Drawing.Point(123, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 15);
+            this.label1.Size = new System.Drawing.Size(382, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "form de tags";
+            this.label1.Text = "Cadastro de operadores";
             // 
-            // frmTags
+            // frmOperadorCadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 365);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Lucida Sans", 9.75F);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "frmTags";
-            this.Text = "frmTags";
+            this.Name = "frmOperadorCadastro";
+            this.Text = "frmOperadorCadastro";
             this.ResumeLayout(false);
             this.PerformLayout();
 

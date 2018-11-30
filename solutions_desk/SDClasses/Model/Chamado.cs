@@ -172,7 +172,7 @@ namespace SDClasses.Model
             cmd.CommandText =
                 "DECLARE @ultimoId INT; " +
                 "DECLARE @ultimoNumeroChamado INT; " +
-                "SELECT @ultimoNumeroChamado = (SELECT TOP 1 NUMERO_CHAM FROM CHAMADOS ORDER BY PK_CHAM DESC) + 1; " +
+                "SELECT @ultimoNumeroChamado = ISNULL((SELECT TOP 1 NUMERO_CHAM FROM CHAMADOS ORDER BY PK_CHAM DESC) + 1, 1); " +
                 "INSERT INTO CHAMADOS VALUES(@ultimoNumeroChamado, '" + chamado.Mensagem + "', '" + chamado.Descricao + "', null, GETDATE(), " + chamado.Cliente.IdCliente + ", " + idEquipamento.IdEquipamento + "); " +
                 "SELECT @ultimoId = (SELECT SCOPE_IDENTITY()); " +
                 "INSERT INTO OPERADORCHAMADOS VALUES('andamento', " + idOperador + ", @ultimoId);";

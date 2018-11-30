@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panelPai = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.lblAbrirChamado = new System.Windows.Forms.Label();
             this.lblConfiguracoes = new System.Windows.Forms.Label();
@@ -37,13 +38,13 @@
             this.lblListaClientes = new System.Windows.Forms.Label();
             this.lblHistoricoChamado = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
+            this.panelSelecionado = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblNomeUsuarioLogado = new System.Windows.Forms.Label();
             this.btnMinimizeForm = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.panelSelecionado = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblOperador = new System.Windows.Forms.Label();
             this.panelPai.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -58,10 +59,20 @@
             this.panelPai.Size = new System.Drawing.Size(913, 499);
             this.panelPai.TabIndex = 8;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(389, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CARREGANDO...";
+            // 
             // panelMenu
             // 
             this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(166)))));
+            this.panelMenu.Controls.Add(this.lblOperador);
             this.panelMenu.Controls.Add(this.lblAbrirChamado);
             this.panelMenu.Controls.Add(this.lblConfiguracoes);
             this.panelMenu.Controls.Add(this.lblPerfil);
@@ -119,11 +130,12 @@
             this.lblListaClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblListaClientes.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaClientes.ForeColor = System.Drawing.Color.White;
-            this.lblListaClientes.Location = new System.Drawing.Point(15, 207);
+            this.lblListaClientes.Location = new System.Drawing.Point(15, 259);
             this.lblListaClientes.Name = "lblListaClientes";
             this.lblListaClientes.Size = new System.Drawing.Size(34, 24);
             this.lblListaClientes.TabIndex = 11;
             this.lblListaClientes.Text = "group";
+            this.lblListaClientes.Click += new System.EventHandler(this.lblListaClientes_Click);
             // 
             // lblHistoricoChamado
             // 
@@ -131,7 +143,7 @@
             this.lblHistoricoChamado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblHistoricoChamado.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHistoricoChamado.ForeColor = System.Drawing.Color.White;
-            this.lblHistoricoChamado.Location = new System.Drawing.Point(15, 155);
+            this.lblHistoricoChamado.Location = new System.Drawing.Point(15, 207);
             this.lblHistoricoChamado.Name = "lblHistoricoChamado";
             this.lblHistoricoChamado.Size = new System.Drawing.Size(34, 24);
             this.lblHistoricoChamado.TabIndex = 0;
@@ -153,6 +165,14 @@
             this.lblSair.Text = "exit_to_app";
             this.lblSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
+            // 
+            // panelSelecionado
+            // 
+            this.panelSelecionado.BackgroundImage = global::solutions_desk.Properties.Resources.icone_selecionado;
+            this.panelSelecionado.Location = new System.Drawing.Point(8, 91);
+            this.panelSelecionado.Name = "panelSelecionado";
+            this.panelSelecionado.Size = new System.Drawing.Size(49, 49);
+            this.panelSelecionado.TabIndex = 15;
             // 
             // panel3
             // 
@@ -214,22 +234,18 @@
             this.imgLogo.TabStop = false;
             this.imgLogo.Click += new System.EventHandler(this.imgLogo_Click);
             // 
-            // panelSelecionado
+            // lblOperador
             // 
-            this.panelSelecionado.BackgroundImage = global::solutions_desk.Properties.Resources.icone_selecionado;
-            this.panelSelecionado.Location = new System.Drawing.Point(8, 91);
-            this.panelSelecionado.Name = "panelSelecionado";
-            this.panelSelecionado.Size = new System.Drawing.Size(49, 49);
-            this.panelSelecionado.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(389, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CARREGANDO...";
+            this.lblOperador.AutoSize = true;
+            this.lblOperador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblOperador.Font = new System.Drawing.Font("Material Icons", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperador.ForeColor = System.Drawing.Color.White;
+            this.lblOperador.Location = new System.Drawing.Point(15, 155);
+            this.lblOperador.Name = "lblOperador";
+            this.lblOperador.Size = new System.Drawing.Size(34, 24);
+            this.lblOperador.TabIndex = 16;
+            this.lblOperador.Text = "assignment_ind";
+            this.lblOperador.Click += new System.EventHandler(this.lblOperador_Click);
             // 
             // frmPrincipal
             // 
@@ -281,6 +297,7 @@
         private System.Windows.Forms.Label lblAbrirChamado;
         private System.Windows.Forms.Panel panelSelecionado;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblOperador;
     }
 }
 

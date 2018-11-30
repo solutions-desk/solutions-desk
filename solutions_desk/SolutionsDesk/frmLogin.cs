@@ -24,16 +24,7 @@ namespace solutions_desk
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            // INICIANDO A TELA PRINCIPAL
-            // this.Hide();
-            // var telaPrincipal = new frmPrincipal();
-            // telaPrincipal.Show();
-
-            // BANCO DE DADOS
-            // BancoSQL banco = new BancoSQL();
-            // lblResultado.Text = banco.Conexao(txtUsuario.Text);
-            
+        {            
             Operador operador = new Operador();
 
             LoginController loginController = new LoginController();
@@ -110,8 +101,7 @@ namespace solutions_desk
         {
             txtUsuario.Text = "";
             txtSenha.Text = "";
-            //txtUsuario.PlaceHolderText = "Digite seu e-mail";
-            //txtSenha.PlaceHolderText = "****";
+            panelAviso.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)

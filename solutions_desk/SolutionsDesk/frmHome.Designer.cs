@@ -33,11 +33,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTotalClientes = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblTotalAbertosPorMim = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalChamadosEmAberto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -113,15 +113,15 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "TOTAL DE CLIENTES";
             // 
-            // label8
+            // lblTotalClientes
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(463, 353);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 58);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "2";
+            this.lblTotalClientes.AutoSize = true;
+            this.lblTotalClientes.Font = new System.Drawing.Font("Roboto Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblTotalClientes.Location = new System.Drawing.Point(463, 353);
+            this.lblTotalClientes.Name = "lblTotalClientes";
+            this.lblTotalClientes.Size = new System.Drawing.Size(69, 58);
+            this.lblTotalClientes.TabIndex = 29;
+            this.lblTotalClientes.Text = "--";
             // 
             // label5
             // 
@@ -133,15 +133,15 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "TOTAL ABERTOS POR MIM";
             // 
-            // label6
+            // lblTotalAbertosPorMim
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(460, 259);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 58);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "50";
+            this.lblTotalAbertosPorMim.AutoSize = true;
+            this.lblTotalAbertosPorMim.Font = new System.Drawing.Font("Roboto Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblTotalAbertosPorMim.Location = new System.Drawing.Point(460, 259);
+            this.lblTotalAbertosPorMim.Name = "lblTotalAbertosPorMim";
+            this.lblTotalAbertosPorMim.Size = new System.Drawing.Size(69, 58);
+            this.lblTotalAbertosPorMim.TabIndex = 27;
+            this.lblTotalAbertosPorMim.Text = "--";
             // 
             // label4
             // 
@@ -153,15 +153,15 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "CHAMADOS EM ABERTO";
             // 
-            // label2
+            // lblTotalChamadosEmAberto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(457, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 58);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "12";
+            this.lblTotalChamadosEmAberto.AutoSize = true;
+            this.lblTotalChamadosEmAberto.Font = new System.Drawing.Font("Roboto Black", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblTotalChamadosEmAberto.Location = new System.Drawing.Point(457, 164);
+            this.lblTotalChamadosEmAberto.Name = "lblTotalChamadosEmAberto";
+            this.lblTotalChamadosEmAberto.Size = new System.Drawing.Size(69, 58);
+            this.lblTotalChamadosEmAberto.TabIndex = 25;
+            this.lblTotalChamadosEmAberto.Text = "--";
             // 
             // label1
             // 
@@ -224,11 +224,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblTotalClientes);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTotalAbertosPorMim);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTotalChamadosEmAberto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
@@ -249,11 +249,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTotalClientes;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTotalAbertosPorMim;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotalChamadosEmAberto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;

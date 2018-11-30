@@ -47,7 +47,6 @@ namespace SDClasses.Controller
 
         }
 
-
         public Operador buscaUsuario(Operador operador)
         {
             
@@ -81,6 +80,7 @@ namespace SDClasses.Controller
                 return new Operador();
             }
         }
+
         public Cliente buscaCliente(Cliente cliente)
         {
             connectionString = @"Data Source=DESKTOP-QTSN2HH;Initial Catalog=HELPDESK;Integrated Security=TRUE";

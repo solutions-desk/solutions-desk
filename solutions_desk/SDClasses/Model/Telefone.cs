@@ -12,6 +12,10 @@ namespace SDClasses.Model
         private int numero;
         private string tipo;
 
+        public Telefone()
+        {
+
+        }
         public Telefone(int ddd, int numero, string tipo)
         {
             this.ddd = ddd;

@@ -25,6 +25,7 @@ namespace solutions_desk
         }
         public frmPrincipal(frmLogin login, Operador pessoaLogada)
         {
+            
             InitializeComponent();
             this.telaLogin = login;
             this.pessoaLogada = pessoaLogada;
@@ -151,6 +152,23 @@ namespace solutions_desk
 
         private void lblAbrirChamado_Click(object sender, EventArgs e)
         {
+
+
+            lblAbrirChamado.BackColor = ColorTranslator.FromHtml("#FFF");
+            lblAbrirChamado.ForeColor = ColorTranslator.FromHtml("#084AA2");
+
+
+            panelSelecionado.Location = new Point(8, 91);
+            lblHistoricoChamado.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblHistoricoChamado.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblListaClientes.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblListaClientes.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblOperador.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblOperador.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+
             panelPai.Controls.Clear();
             frmAbrirChamado frmAbrirChamado = new frmAbrirChamado(panelPai.Width, panelPai.Height, pessoaLogada);
             frmAbrirChamado.TopLevel = false;
@@ -161,6 +179,20 @@ namespace solutions_desk
 
         private void lblHistoricoChamado_Click(object sender, EventArgs e)
         {
+
+            lblHistoricoChamado.BackColor = ColorTranslator.FromHtml("#FFF");
+            lblHistoricoChamado.ForeColor = ColorTranslator.FromHtml("#084AA2");
+
+            panelSelecionado.Location= new Point(8, 195);
+            lblAbrirChamado.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblAbrirChamado.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblListaClientes.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblListaClientes.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblOperador.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblOperador.ForeColor = ColorTranslator.FromHtml("#FFF");
+
             panelPai.Controls.Clear();
             frmHistoricoChamado frmHistoricoChamado = new frmHistoricoChamado(panelPai);
             frmHistoricoChamado.TopLevel = false;
@@ -172,6 +204,54 @@ namespace solutions_desk
         private void imgLogo_Click(object sender, EventArgs e)
         {
             this.carregaTelaBemVindo();
+        }
+
+        private void lblListaClientes_Click(object sender, EventArgs e)
+        {
+
+            lblListaClientes.BackColor = ColorTranslator.FromHtml("#FFF");
+            lblListaClientes.ForeColor = ColorTranslator.FromHtml("#084AA2");
+
+            panelSelecionado.Location = new Point(8, 247);
+            lblAbrirChamado.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblAbrirChamado.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblHistoricoChamado.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblHistoricoChamado.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblOperador.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblOperador.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            panelPai.Controls.Clear();
+            frmCliente frmCliente= new frmCliente(panelPai);
+            frmCliente.TopLevel = false;
+            panelPai.Controls.Add(frmCliente);
+            frmCliente.Show();
+            frmCliente.BringToFront();
+        }
+
+        private void lblOperador_Click(object sender, EventArgs e)
+        {
+            lblOperador.BackColor = ColorTranslator.FromHtml("#FFF");
+            lblOperador.ForeColor = ColorTranslator.FromHtml("#084AA2");
+
+            panelSelecionado.Location = new Point(8, 141);
+            lblHistoricoChamado.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblHistoricoChamado.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblAbrirChamado.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblAbrirChamado.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            lblListaClientes.BackColor = ColorTranslator.FromHtml("#084AA2");
+            lblListaClientes.ForeColor = ColorTranslator.FromHtml("#FFF");
+
+            panelPai.Controls.Clear();
+            frmOperador frmOperador = new frmOperador(panelPai);
+            frmOperador.TopLevel = false;
+            panelPai.Controls.Add(frmOperador);
+            frmOperador.Show();
+            frmOperador.BringToFront();
+
         }
     }
 }

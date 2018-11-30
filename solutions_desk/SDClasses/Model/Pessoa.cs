@@ -12,6 +12,7 @@ namespace SDClasses.Model
         private string email;
         private string senha;
         private Telefone telefone;
+        private string dataCadastro;
 
         public Pessoa(string nome, string email, string senha) {
             this.nome = nome;
@@ -31,11 +32,15 @@ namespace SDClasses.Model
             set { nome = value; }
         }
 
-        public string Senha { get; set; }
+        public string Senha { get { return senha; } set { senha = value; } }
 
         public string Email {
             get { return this.email; }
             set { email = value; }
         }
+
+        public Telefone Telefone { get; set; }
+
+        public string DataCadastro { get; set; }
     }
 }
