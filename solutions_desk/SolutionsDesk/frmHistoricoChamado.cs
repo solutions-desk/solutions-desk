@@ -28,9 +28,28 @@ namespace solutions_desk
         }
         private void carregaChamados()
         {
+            var qtdChamados = 0;
+            var qtdPaginas = 0;
+            var paginaAtual = 1;
 
             List<Chamado> todosChamados = new List<Chamado>();
-            todosChamados = new Chamado().obterChamado();
+            todosChamados = new Chamado().obterChamadoTakeSkip();
+
+            if (todosChamados.Count > 0)
+            {
+                qtdChamados = todosChamados[0].Quantidade;
+                qtdPaginas = qtdChamados / 9; 
+
+
+
+
+
+
+
+            }
+
+
+
             int indexChamadosRecentes = 1;
             var lastPositionItemChamado = new Point(100, 120);
             

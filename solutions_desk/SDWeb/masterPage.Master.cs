@@ -13,5 +13,10 @@ namespace SDWeb
         {
 
         }
+        protected void btnSair_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("login.aspx");
+        }
     }
 }

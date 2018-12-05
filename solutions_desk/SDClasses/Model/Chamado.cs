@@ -16,6 +16,7 @@ namespace SDClasses.Model
         private string connectionString;
         private string dataChamado;
         private string status;
+        private int quantidade;
 
         public Chamado()
         {
@@ -39,13 +40,31 @@ namespace SDClasses.Model
             this.status = status;
             this.cliente = cliente;
         }
-
+        public Chamado(int numero, string marca, string modelo, string mensagem, string descricao, string dataChamado, string status, Cliente cliente, int quantidade)
+        {
+            if (numero != null && numero != 0)
+            {
+                this.numero = numero;
+            }
+            this.marca = marca;
+            this.modelo = modelo;
+            this.mensagem = mensagem;
+            this.descricao = descricao;
+            if (dataChamado != null)
+            {
+                this.dataChamado = dataChamado;
+            }
+            this.status = status;
+            this.cliente = cliente;
+            this.quantidade = quantidade;
+        }
 
         public int Numero
         {
             get { return this.numero; }
             set { this.numero = value; }
         }
+
         public string Marca
         {
             get { return this.marca; }
@@ -57,6 +76,7 @@ namespace SDClasses.Model
             get { return this.modelo; }
             set { this.modelo = value; }
         }
+
         public string Mensagem
         {
             get { return this.mensagem; }
@@ -87,6 +107,11 @@ namespace SDClasses.Model
             get { return this.cliente; }
             set { this.Cliente = value; }
         }
+        public int Quantidade
+        {
+            get { return this.quantidade; }
+            set { this.quantidade = value; }
+        }
 
         public List<Chamado> obterChamado(int total = 10)
         {
@@ -101,7 +126,7 @@ namespace SDClasses.Model
 
             cmd.CommandText =
                  "SELECT " +
-                    "TOP(" + total + ")" +
+                    "QTD = COUNT(1) OVER()," +
                     "CHAMADOS.PK_CHAM AS 'ID_CHAMADO', " +
                     "NUMERO_CHAM AS 'NUMERO', " +
                     "MENS_CHAM AS 'MENSAGEM', " +
@@ -119,7 +144,9 @@ namespace SDClasses.Model
                     "INNER JOIN MARCAS ON EQUIPAMENTOS.PK_MARCA = MARCAS.PK_MARCA " +
                     "INNER JOIN MODELOS ON EQUIPAMENTOS.PK_MODELO = MODELOS.PK_MODELO " +
                     "INNER JOIN OPERADORCHAMADOS ON CHAMADOS.PK_CHAM = OPERADORCHAMADOS.PK_CHAM " +
-                "ORDER BY CHAMADOS.PK_CHAM DESC;";
+                "ORDER BY CHAMADOS.PK_CHAM DESC " +
+                    "OFFSET 0 ROWS -- QUANTIDADE " +
+                    "FETCH NEXT 9 ROWS ONLY; --PAGINAÇÃO;";
 
 
             cmd.Connection = conexao.Conectar();
@@ -142,7 +169,83 @@ namespace SDClasses.Model
                             dr["DESCRICAO"].ToString(),
                             dr["CRIADO_EM"].ToString(),
                             dr["STATUS_CHAMADO"].ToString(),
-                            clienteChamado
+                            clienteChamado,
+                            Convert.ToInt32(dr["QTD"])
+                        )
+                    );
+                }
+
+
+                conexao.Desconectar();
+
+                return chamadosRecentes;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return chamadosRecentes;
+            }
+        }
+        public List<Chamado> obterChamadoTakeSkip(int take = 10, int skip = 0)
+        {
+            List<Chamado> chamadosRecentes = new List<Chamado>();
+
+            Conexao conexao = new Conexao();
+            SqlConnection cnn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+
+            cmd.CommandText =
+                 "SELECT " +
+                    "QTD = COUNT(1) OVER()," +
+                    "CHAMADOS.PK_CHAM AS 'ID_CHAMADO', " +
+                    "NUMERO_CHAM AS 'NUMERO', " +
+                    "MENS_CHAM AS 'MENSAGEM', " +
+                    "DESC_CHAM AS 'DESCRICAO', " +
+                    "IDENTIFICACAO_EQUIP AS 'NUMERO_EQUIPAMENTO', " +
+                    "DATA_CHAM AS 'CRIADO_EM', " +
+                    "DATA_VENDA_EQUIP AS 'VENDIDO_EM', " +
+                    "DESC_MARCA AS 'MARCA', " +
+                    "DESC_MODELO AS 'MODELO', " +
+                    "EQUIPAMENTOS.PK_CLI AS 'ID_CLIENTE', " +
+                    "STS_OP_CHAM AS 'STATUS_CHAMADO', " +
+                    "PK_OP_CHAM AS 'ID_OPERADOR' " +
+                "FROM CHAMADOS " +
+                    "INNER JOIN EQUIPAMENTOS ON CHAMADOS.PK_EQUIP = EQUIPAMENTOS.PK_EQUIP " +
+                    "INNER JOIN MARCAS ON EQUIPAMENTOS.PK_MARCA = MARCAS.PK_MARCA " +
+                    "INNER JOIN MODELOS ON EQUIPAMENTOS.PK_MODELO = MODELOS.PK_MODELO " +
+                    "INNER JOIN OPERADORCHAMADOS ON CHAMADOS.PK_CHAM = OPERADORCHAMADOS.PK_CHAM " +
+                "ORDER BY CHAMADOS.PK_CHAM DESC " +
+                    "OFFSET "+ take +" ROWS -- QUANTIDADE " +
+                    "FETCH NEXT 9 ROWS ONLY; --PAGINAÇÃO;";
+
+
+            cmd.Connection = conexao.Conectar();
+
+            try
+            {
+
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Cliente clienteChamado = new Cliente().BuscarClientePorID(Convert.ToInt16(dr["ID_CLIENTE"]));
+
+                    chamadosRecentes.Add(
+                        new Chamado(
+                            Convert.ToInt32(dr["NUMERO"]),
+                            dr["MARCA"].ToString(),
+                            dr["MODELO"].ToString(),
+                            dr["MENSAGEM"].ToString(),
+                            dr["DESCRICAO"].ToString(),
+                            dr["CRIADO_EM"].ToString(),
+                            dr["STATUS_CHAMADO"].ToString(),
+                            clienteChamado,
+                            Convert.ToInt32(dr["QTD"])
                         )
                     );
                 }

@@ -1,0 +1,384 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+object {
+  display: none; }
+
+h1 {
+  font-size: 34px;
+  margin: 1rem 0; }
+
+h2 {
+  font-size: 24px;
+  margin: 1rem 0; }
+
+h3 {
+  font-size: 18px;
+  margin: 1rem 0; }
+
+p {
+  margin-bottom: 1rem; }
+
+a {
+  text-decoration: none;
+  color: #084aa2; }
+  a:link, a:visited, a:hover, a:active, a:focus {
+    color: #084aa2; }
+  a:hover {
+    text-decoration: underline; }
+
+strong {
+  font-weight: 700; }
+
+.botao {
+  border: 1px solid transparent;
+  padding: 0 12px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  color: #161616;
+  margin: 10px 0;
+  outline: none;
+  max-height: 35px;
+  height: 35px;
+  text-decoration: none; }
+  .botao:hover {
+    cursor: pointer; }
+  .botao.primary {
+    background-color: #084aa2;
+    color: #fff; }
+  .botao.danger {
+    background-color: #f44336;
+    color: #fff; }
+  .botao.block {
+    display: inline-block;
+    width: 100%; }
+  .botao.ghost {
+    text-decoration: none;
+    background-color: transparent;
+    padding-left: 0; }
+  .botao.icone {
+    position: relative;
+    padding-left: 2rem; }
+    .botao.icone i {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%); }
+
+label {
+  display: block;
+  color: #000;
+  margin-bottom: 10px; }
+
+input, select, textarea {
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  background-color: #fafbfc;
+  font-size: 1rem;
+  display: inline-block;
+  width: 100%;
+  outline: none;
+  height: 45px;
+  max-height: 45px; }
+
+input[type='checkbox'] {
+  display: none; }
+
+select {
+  padding: 10px; }
+
+textarea {
+  max-height: initial;
+  height: initial; }
+
+.input-container {
+  position: relative;
+  margin: 10px 0; }
+
+.menu {
+  background-color: #084aa2;
+  min-width: 65px;
+  width: 65px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; }
+  .menu .logo-small {
+    background-color: #fff;
+    padding: 27px 10px;
+    margin-bottom: 10px;
+    padding-bottom: 22px; }
+  .menu .item-menu {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 65px;
+    text-decoration: none; }
+    .menu .item-menu:first-child {
+      margin-top: 1rem; }
+    .menu .item-menu.selecionado {
+      background-color: #fff;
+      color: #084aa2; }
+
+.sub-menu {
+  padding: 1rem;
+  background-color: #f4f5f7;
+  height: 100vh;
+  min-width: 250px;
+  width: 250px; }
+  .sub-menu .sub-menu-item {
+    background-color: #dcdfe5;
+    border-radius: 4px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    color: #42526e;
+    text-decoration: none; }
+    .sub-menu .sub-menu-item:hover {
+      opacity: .8; }
+    .sub-menu .sub-menu-item i {
+      margin-right: 1rem; }
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .login .logo {
+    margin-bottom: 1rem; }
+  .login .container-login {
+    max-width: 330px;
+    padding: 1rem;
+    margin: 0 auto; }
+  .login .mostrar-senha {
+    position: absolute;
+    right: 1rem;
+    bottom: 10px; }
+    .login .mostrar-senha:hover {
+      cursor: pointer; }
+
+.dashboard .botao-novo-chamado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #414141;
+  border-radius: 5px;
+  color: #000;
+  height: 50px;
+  text-decoration: none; }
+
+.dashboard .lista-chamados .chamado {
+  background-color: #fff;
+  border-left: 6px solid #ccc;
+  padding: 12px 8px;
+  margin: 1rem 0;
+  transition: box-shadow 0.3s ease; }
+  .dashboard .lista-chamados .chamado:hover {
+    cursor: pointer;
+    box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.155); }
+  .dashboard .lista-chamados .chamado p {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #42526e; }
+    .dashboard .lista-chamados .chamado p:last-child {
+      margin-bottom: 0; }
+  .dashboard .lista-chamados .chamado.atual {
+    box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0.15); }
+  .dashboard .lista-chamados .chamado.encerrado {
+    border-left-color: #4caf50; }
+  .dashboard .lista-chamados .chamado.tecnico {
+    border-left-color: #fb8c00; }
+  .dashboard .lista-chamados .chamado.andamento {
+    border-left-color: #1e88e5; }
+
+.dashboard .conteudo-chamado {
+  border-right: 1px solid #a9a9a9;
+  min-width: 490px;
+  width: 490px;
+  height: 100vh;
+  overflow: auto;
+  padding: 1rem; }
+
+.dashboard .conteudo-anexo {
+  width: 100%;
+  padding: 1rem; }
+  .dashboard .conteudo-anexo .adicionar-arquivo {
+    border: 1px solid #f0f0f0;
+    max-width: 450px;
+    padding: 8px; }
+    .dashboard .conteudo-anexo .adicionar-arquivo:hover {
+      cursor: pointer; }
+
+.dashboard .barra-status {
+  border-bottom: 5px solid #ccc;
+  display: block; }
+  .dashboard .barra-status.andamento {
+    border-bottom-color: #1e88e5; }
+
+.dashboard .comentarios .comentario {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  position: relative; }
+  .dashboard .comentarios .comentario:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #084aa2;
+    display: inline-block;
+    position: absolute;
+    left: -25px; }
+  .dashboard .comentarios .comentario:not(:last-child):after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: -18px;
+    height: 80%;
+    width: 1px;
+    border-right: 1px solid #084aa2; }
+
+.dashboard .conteudo-historico-chamado {
+  padding: 1rem;
+  width: 100%;
+  overflow: auto;
+  height: 100vh; }
+  .dashboard .conteudo-historico-chamado .container-pesquisar {
+    padding-bottom: 10px;
+    padding-left: 1rem; }
+    .dashboard .conteudo-historico-chamado .container-pesquisar .btn {
+      display: flex;
+      padding: 10px; }
+      .dashboard .conteudo-historico-chamado .container-pesquisar .btn i {
+        color: #6f6f6f; }
+  .dashboard .conteudo-historico-chamado .lista-chamados {
+    display: flex;
+    flex-wrap: wrap; }
+    .dashboard .conteudo-historico-chamado .lista-chamados .chamado {
+      flex: calc(100% / 4);
+      margin: 1rem;
+      box-shadow: 0 0 30px -8px rgba(0, 0, 0, 0.2); }
+  .dashboard .conteudo-historico-chamado .legenda span {
+    font-size: 12px;
+    margin-right: 1rem; }
+    .dashboard .conteudo-historico-chamado .legenda span:before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      border-radius: 100px;
+      height: 8px;
+      border: 1px solid transparent;
+      margin-right: 5px;
+      background-color: #ccc; }
+    .dashboard .conteudo-historico-chamado .legenda span.aberto:before {
+      background-color: #fff;
+      border-color: #d8d8d8; }
+    .dashboard .conteudo-historico-chamado .legenda span.encerrado:before {
+      background-color: #4caf50; }
+    .dashboard .conteudo-historico-chamado .legenda span.tecnico:before {
+      background-color: #fb8c00; }
+    .dashboard .conteudo-historico-chamado .legenda span.andamento:before {
+      background-color: #2815e5; }
+    .dashboard .conteudo-historico-chamado .legenda span.atraso:before {
+      background-color: #f12516; }
+    .dashboard .conteudo-historico-chamado .legenda span.cancelado:before {
+      background-color: #bbbbbb; }
+
+.cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .cadastro .logo {
+    margin-bottom: 1rem; }
+  .cadastro .container-cadastro {
+    max-width: 600px;
+    padding: 1rem;
+    margin: 0 auto; }
+  .cadastro .mostrar-senha {
+    position: absolute;
+    right: 1rem;
+    bottom: 10px; }
+    .cadastro .mostrar-senha:hover {
+      cursor: pointer; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden; }
+
+.conteudo {
+  width: calc(100vw - 315px); }
+  .conteudo.full {
+    width: calc(100vw - 65px); }
+
+.separador {
+  margin: 1rem 0;
+  display: block;
+  border-top: 1px solid #a9a9a9;
+  width: 100%; }
+
+.custom-control {
+  line-height: 1.5rem; }
+
+.tags {
+  margin: 8px 0; }
+  .tags .tag {
+    font-size: 12px;
+    padding: 2px 1rem;
+    background-color: #dedcdc;
+    margin-left: 8px;
+    border-radius: 100px; }

@@ -39,7 +39,7 @@ namespace solutions_desk
         }
         public void carregaCadastroOperadores(int largura, int altura, Panel panelPai)
         {
-            panelSelect.Location = new Point(10, 16);
+            panelSelect.Location = new Point(10, 47);
             panelPrincipal.Controls.Clear();
             frmOperadorCadastro frmOperadorCadastro = new frmOperadorCadastro(largura, altura, panelPrincipal);
             frmOperadorCadastro.TopLevel = false;

@@ -89,7 +89,7 @@ namespace SDClasses.Controller
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
 
-            cmd.CommandText = "SELECT * FROM CLIENTE WHERE EMAIL_CLI = '" + cliente.Email + "' AND SENHA_CLI = " + cliente.Senha;
+            cmd.CommandText = "SELECT * FROM CLIENTES WHERE EMAIL_CLI = '" + cliente.Email + "' AND SENHA_CLI = " + cliente.Senha;
             cmd.Connection = cnn;
 
             try

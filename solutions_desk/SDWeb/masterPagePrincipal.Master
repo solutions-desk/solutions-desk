@@ -4,7 +4,16 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Solutions Desk</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/fonts/material-icons/material-icons.css">
+    <link rel="stylesheet" href="/public/fonts/roboto/roboto.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="icon" type="image/png" href="/public/images/favicon.png" />
+    <script src="/public/js/jquery-2.2.4.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

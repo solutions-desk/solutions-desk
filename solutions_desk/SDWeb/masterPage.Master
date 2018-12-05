@@ -4,16 +4,67 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Solutions Desk</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/fonts/material-icons/material-icons.css">
+    <link rel="stylesheet" href="/public/fonts/roboto/roboto.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="icon" type="image/png" href="/public/images/favicon.png" />
+    <script src="/public/js/jquery-2.2.4.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <h1>AEW POLA</h1>
-        <div>
+         <div class="d-flex dashboard">
+            <div class="menu">
+                <div class="logo-small">
+                    <img src="/public/images/logo-small.png" >
+                </div>
+                <a href="/abrirChamado.aspx" class="item-menu">
+                    <i class="material-icons">record_voice_over</i>
+                </a>
+
+                <!-- <a href="javascript:void(0);" class="item-menu">
+                    <i class="material-icons">assignment_ind</i>
+                </a> -->
+
+                 <a href="/historicoChamados.aspx" class="item-menu">
+                    <i class="material-icons">assignment</i>
+                </a> 
+                <!-- <a href="javascript:void(0);" class="item-menu">
+                    <i class="material-icons">group</i>
+                </a> -->
+                <span class="flex-fill"></span>
+
+                <a href="javascript:void(0);" class="item-menu">
+                    <i class="material-icons">help</i>
+                </a>
+
+                <a href="/perfil.aspx" class="item-menu">
+                    <i class="material-icons">person</i>
+                </a>
+
+                <asp:LinkButton ID="btnSair" runat="server" class="item-menu"  runat="server" OnClick="btnSair_Click">
+                    <i class="material-icons">exit_to_app</i>
+                </asp:LinkButton>
+
+            </div>
+
+            <script>
+                // var item = document.getSelectionAll(".item-menu")
+                $(".item-menu").on("click", function() {
+                    $(".item-menu").removeClass("selecionado");
+                    $(this).addClass("selecionado")
+                });
+            </script>
+
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+       
         </div>
     </form>
 </body>

@@ -34,16 +34,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimizeForm = new System.Windows.Forms.Label();
             this.btnCloseForm = new System.Windows.Forms.Label();
-            this.txtSenha = new solutions_desk.PlaceHolderTextBox();
-            this.txtUsuario = new solutions_desk.PlaceHolderTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelAviso = new System.Windows.Forms.Panel();
             this.lblAviso = new System.Windows.Forms.Label();
+            this.txtSenha = new solutions_desk.PlaceHolderTextBox();
+            this.txtUsuario = new solutions_desk.PlaceHolderTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelAviso.SuspendLayout();
             this.SuspendLayout();
@@ -53,9 +51,9 @@
             this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(74)))), ((int)(((byte)(162)))));
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(252, 355);
+            this.btnEntrar.Location = new System.Drawing.Point(114, 342);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(123, 31);
+            this.btnEntrar.Size = new System.Drawing.Size(261, 31);
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -102,27 +100,6 @@
             this.label4.Text = "Acesse os chamdos dos clientes";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(114, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 31);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "CADASTRE-SE";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(115, 313);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Esqueci minha senha";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::solutions_desk.Properties.Resources.logo_completo;
@@ -155,6 +132,43 @@
             this.btnCloseForm.TabIndex = 11;
             this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(111, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 15);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Operador/Gerente";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // panelAviso
+            // 
+            this.panelAviso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelAviso.Controls.Add(this.lblAviso);
+            this.panelAviso.Location = new System.Drawing.Point(2, 311);
+            this.panelAviso.Name = "panelAviso";
+            this.panelAviso.Size = new System.Drawing.Size(484, 39);
+            this.panelAviso.TabIndex = 26;
+            // 
+            // lblAviso
+            // 
+            this.lblAviso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAviso.AutoSize = true;
+            this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblAviso.ForeColor = System.Drawing.Color.Red;
+            this.lblAviso.Location = new System.Drawing.Point(154, 8);
+            this.lblAviso.Name = "lblAviso";
+            this.lblAviso.Size = new System.Drawing.Size(180, 20);
+            this.lblAviso.TabIndex = 23;
+            this.lblAviso.Text = "Usuário não encontrado";
+            this.lblAviso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAviso.Click += new System.EventHandler(this.lblEsperando_Click_1);
+            // 
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(251)))), ((int)(((byte)(252)))));
@@ -181,57 +195,18 @@
             this.txtUsuario.TabIndex = 23;
             this.txtUsuario.Text = "Digite seu e-mail";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(111, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 15);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Operador/Gerente";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // panelAviso
-            // 
-            this.panelAviso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelAviso.Controls.Add(this.lblAviso);
-            this.panelAviso.Location = new System.Drawing.Point(2, 324);
-            this.panelAviso.Name = "panelAviso";
-            this.panelAviso.Size = new System.Drawing.Size(484, 39);
-            this.panelAviso.TabIndex = 26;
-            // 
-            // lblAviso
-            // 
-            this.lblAviso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAviso.AutoSize = true;
-            this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblAviso.ForeColor = System.Drawing.Color.Red;
-            this.lblAviso.Location = new System.Drawing.Point(154, 8);
-            this.lblAviso.Name = "lblAviso";
-            this.lblAviso.Size = new System.Drawing.Size(180, 20);
-            this.lblAviso.TabIndex = 23;
-            this.lblAviso.Text = "Usuário não encontrado";
-            this.lblAviso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAviso.Click += new System.EventHandler(this.lblEsperando_Click_1);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(486, 490);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.panelAviso);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -261,8 +236,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private PlaceHolderTextBox txtUsuario;
         private PlaceHolderTextBox txtSenha;

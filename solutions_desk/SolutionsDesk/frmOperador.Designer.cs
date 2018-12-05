@@ -103,7 +103,7 @@
             // panelSelect
             // 
             this.panelSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            this.panelSelect.Location = new System.Drawing.Point(16, 12);
+            this.panelSelect.Location = new System.Drawing.Point(12, 47);
             this.panelSelect.Name = "panelSelect";
             this.panelSelect.Size = new System.Drawing.Size(227, 36);
             this.panelSelect.TabIndex = 9;

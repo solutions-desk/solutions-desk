@@ -67,18 +67,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="frmLogin.aspx" />
+    <Content Include="AbrirChamado.aspx" />
+    <Content Include="Cadastro.aspx" />
+    <Content Include="DetalheChamado.aspx" />
+    <Content Include="HistoricoChamados.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Perfil.aspx" />
+    <Content Include="public\css\bootstrap.min.css" />
+    <Content Include="public\css\main.css" />
+    <Content Include="public\fonts\material-icons\material-icons.css" />
+    <Content Include="public\fonts\material-icons\MaterialIcons-Regular.svg" />
+    <Content Include="public\fonts\roboto\roboto.css" />
+    <Content Include="public\images\favicon.png" />
+    <Content Include="public\images\logo-small.png" />
+    <Content Include="public\images\logo.png" />
+    <Content Include="public\js\jquery-2.2.4.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.aspx.cs">
-      <DependentUpon>frmLogin.aspx</DependentUpon>
+    <Compile Include="AbrirChamado.aspx.cs">
+      <DependentUpon>AbrirChamado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmLogin.aspx.designer.cs">
-      <DependentUpon>frmLogin.aspx</DependentUpon>
+    <Compile Include="AbrirChamado.aspx.designer.cs">
+      <DependentUpon>AbrirChamado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalheChamado.aspx.cs">
+      <DependentUpon>DetalheChamado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalheChamado.aspx.designer.cs">
+      <DependentUpon>DetalheChamado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoricoChamados.aspx.cs">
+      <DependentUpon>HistoricoChamados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoricoChamados.aspx.designer.cs">
+      <DependentUpon>HistoricoChamados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="masterPage.Master.cs">
       <DependentUpon>masterPage.Master</DependentUpon>
@@ -87,11 +129,35 @@
     <Compile Include="masterPage.Master.designer.cs">
       <DependentUpon>masterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="masterPage.Master" />
     <None Include="packages.config" />
+    <Content Include="public\fonts\material-icons\MaterialIcons-Regular.eot" />
+    <Content Include="public\fonts\material-icons\MaterialIcons-Regular.ijmap" />
+    <Content Include="public\fonts\material-icons\MaterialIcons-Regular.ttf" />
+    <Content Include="public\fonts\material-icons\MaterialIcons-Regular.woff" />
+    <Content Include="public\fonts\material-icons\MaterialIcons-Regular.woff2" />
+    <Content Include="public\fonts\roboto\Roboto-Black.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-Italic.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-LightItalic.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="public\fonts\roboto\Roboto-ThinItalic.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
