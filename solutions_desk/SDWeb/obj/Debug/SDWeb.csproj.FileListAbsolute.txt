@@ -48,11 +48,11 @@ C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\roslyn\vbc.rsp
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\roslyn\VBCSCompiler.exe
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\roslyn\VBCSCompiler.exe.config
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\SDClasses.dll
+C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\SDClasses.pdb
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\obj\Debug\SDWeb.csprojAssemblyReference.cache
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\obj\Debug\SDWeb.csproj.CoreCompileInputs.cache
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\obj\Debug\SDWeb.csproj.CopyComplete
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\obj\Debug\SDWeb.dll
 C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\obj\Debug\SDWeb.pdb
-C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\SDClasses.dll
-C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\bin\SDClasses.pdb
-C:\Projetos\PIM\PROJETO\solutions_desk\SDWeb\obj\Debug\SDWeb.csprojAssemblyReference.cache

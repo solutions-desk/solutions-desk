@@ -33,7 +33,8 @@ namespace solutions_desk
 
             if (operador.Nome != "")
             {
-                
+                Program.idOperadorLogado = operador.IdOperador;
+
                 this.Hide();
                 var telaPrincipal = new frmPrincipal(this, operador);
                 telaPrincipal.Show();

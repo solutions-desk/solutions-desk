@@ -1,0 +1,33 @@
+.cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    @media screen and (max-width: 600px) {
+        height: inherit;
+    }
+    .logo {
+        margin-bottom: 1rem;
+    }
+    .container-cadastro {
+        max-width: 600px;
+        // width: 500px;
+        padding: 1rem;
+        margin: 0 auto;
+
+        @media screen and (max-width: 600px) {
+            max-width: inherit;
+            padding: 2rem;
+        }
+    }
+    .mostrar-senha {
+        position: absolute;
+        right: 1rem;
+        bottom: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

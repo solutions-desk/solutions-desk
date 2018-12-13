@@ -7,6 +7,7 @@ namespace solutions_desk
 {
     static class Program
     {
+        public static int idOperadorLogado;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

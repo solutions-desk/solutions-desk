@@ -7,13 +7,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="mobile-web-app-capable" content="not">
+
     <title>Solutions Desk</title>
     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/fonts/material-icons/material-icons.css">
     <link rel="stylesheet" href="/public/fonts/roboto/roboto.css">
-    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/main.css?v=1">
     <link rel="icon" type="image/png" href="/public/images/favicon.png" />
     <script src="/public/js/jquery-2.2.4.min.js"></script>
+    
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -38,11 +42,11 @@
                 <!-- <a href="javascript:void(0);" class="item-menu">
                     <i class="material-icons">group</i>
                 </a> -->
-                <span class="flex-fill"></span>
+                <span class="flex-fill hide-mobile"></span>
 
-                <a href="javascript:void(0);" class="item-menu">
+                <!-- <a href="javascript:void(0);" class="item-menu hide-mobile">
                     <i class="material-icons">help</i>
-                </a>
+                </a> -->
 
                 <a href="/perfil.aspx" class="item-menu">
                     <i class="material-icons">person</i>

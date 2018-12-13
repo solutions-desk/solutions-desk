@@ -1,4 +1,6 @@
-﻿using SDClasses.Model;
+﻿using SDClasses.Controller;
+using SDClasses.Model;
+using solutions_desk.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,7 @@ namespace solutions_desk
         private Form formVoltar;
         private Panel panelPai;
         private Chamado chamado;
+        ChamadoController chamadoController = new ChamadoController();
 
         public frmDetalheChamado(Chamado chamado, Panel panelPai, Form formVoltar)
         {
@@ -33,37 +36,57 @@ namespace solutions_desk
         public void carregarInformacoesChamado(Chamado chamado)
         {
             lblNumeroChamado.Text = chamado.Numero.ToString();
-            lblStatusChamado.Text = chamado.Status;
+            
             lblNomeCliente.Text = chamado.Cliente.Nome;
             lblTelefone.Text = chamado.Cliente.Telefone.Numero.ToString();
             lblEmail.Text = chamado.Cliente.Email;
             lblMensagemErro.Text = chamado.Mensagem;
             lblDescricao.Text = chamado.Descricao;
 
+            panelChamadoAtual.Controls.Clear();
+            var itemChamado = new UCchamados(chamado.Numero, chamado.Status, chamado.DataChamado, chamado.Cliente.Nome);
+            itemChamado.Location = new Point(11, 11);
+            itemChamado.Width = 198;
+            panelChamadoAtual.Controls.Add(itemChamado);
+            
+
+            if (chamado.Comentario != "")
+            {
+                lblComentario.Text = chamado.Comentario;
+            } else
+            {
+                lblComentario.Text = "Nenhum comentário adicionado para este chamado";
+            }
 
             switch (chamado.Status)
             {
                 case "encerrado":
+                    lblStatusChamado.Text = "Chamado Encerrado";
                     panelStatusChamado.BackColor = ColorTranslator.FromHtml("#24C06F");
                     break;
 
                 case "tecnico":
+                    lblStatusChamado.Text = "Em Processo Técnico";
                     panelStatusChamado.BackColor = ColorTranslator.FromHtml("#FF9B00");
                     break;
 
                 case "andamento":
+                    lblStatusChamado.Text = "Em Andamento";
                     panelStatusChamado.BackColor = ColorTranslator.FromHtml("#5842EF");
                     break;
 
                 case "atraso":
+                    lblStatusChamado.Text = "Em Atraso";
                     panelStatusChamado.BackColor = ColorTranslator.FromHtml("#FF5043");
                     break;
 
                 case "cancelado":
+                    lblStatusChamado.Text = "Cancelado";
                     panelStatusChamado.BackColor = ColorTranslator.FromHtml("#CACACA");
                     break;
 
                 case "aberto":
+                    lblStatusChamado.Text = "Aberto";
                     panelStatusChamado.BackColor = ColorTranslator.FromHtml("#FFFFFF");
                     break;
 
@@ -172,6 +195,117 @@ namespace solutions_desk
             panelPai.Controls.Add(formVoltar);
             formVoltar.Show();
             formVoltar.BringToFront();  
+        }
+
+        private void lblEncerrado_Click(object sender, EventArgs e)
+        {
+            panelMudarStatusChamado.Visible = false;
+            var foiAtualizado = chamadoController.AtualizarStatusChamado(chamado, "encerrado", Program.idOperadorLogado);
+
+            if (foiAtualizado)
+            {
+                MessageBox.Show("Chamado atualizado");
+                chamado.Status = "encerrado";
+                carregarInformacoesChamado(chamado);
+            } else
+            {
+                MessageBox.Show("Não foi possível encerrar o chamado");
+            }
+
+        }
+
+        private void lblProcessoTecnico_Click(object sender, EventArgs e)
+        {
+            panelMudarStatusChamado.Visible = false;
+            var foiAtualizado = chamadoController.AtualizarStatusChamado(chamado, "tecnico", Program.idOperadorLogado);
+
+            if (foiAtualizado)
+            {
+                MessageBox.Show("Chamado alterado para Processo Técnico");
+                chamado.Status = "tecnico";
+                carregarInformacoesChamado(chamado);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível alteraro status do chamado para Processo Técnico");
+            }
+        }
+
+        private void lblAndamento_Click(object sender, EventArgs e)
+        {
+            panelMudarStatusChamado.Visible = false;
+            var foiAtualizado = chamadoController.AtualizarStatusChamado(chamado, "andamento", Program.idOperadorLogado);
+
+            if (foiAtualizado)
+            {
+                MessageBox.Show("Chamado alterado para em Andamento");
+                chamado.Status = "andamento";
+                carregarInformacoesChamado(chamado);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível alteraro status do chamado para em andamento");
+            }
+        }
+
+        private void lblAtraso_Click(object sender, EventArgs e)
+        {
+            panelMudarStatusChamado.Visible = false;
+            var foiAtualizado = chamadoController.AtualizarStatusChamado(chamado, "atraso", Program.idOperadorLogado);
+
+            if (foiAtualizado)
+            {
+                MessageBox.Show("Chamado alterado para em atraso");
+                chamado.Status = "atraso";
+                carregarInformacoesChamado(chamado);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível alteraro status do chamado para em atraso");
+            }
+        }
+
+        private void lblCancelado_Click(object sender, EventArgs e)
+        {
+            panelMudarStatusChamado.Visible = false;
+            var foiAtualizado = chamadoController.AtualizarStatusChamado(chamado, "cancelado", Program.idOperadorLogado);
+
+            if (foiAtualizado)
+            {
+                MessageBox.Show("Chamado alterado para em cancelado");
+                chamado.Status = "cancelado";
+                carregarInformacoesChamado(chamado);
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível alteraro status do chamado para em cancelado");
+            }
+        }
+
+        private void btnAdicionarComentario_Click(object sender, EventArgs e)
+        {
+            var isComentarioAtualizado = false;
+            
+            if (chamado.Comentario == "")
+            {
+                chamado.Comentario = txtComentario.Text;
+                isComentarioAtualizado = chamadoController.AdicionarComentario(Program.idOperadorLogado, chamado);
+            } else
+            {
+                chamado.Comentario = txtComentario.Text;
+                isComentarioAtualizado = chamadoController.AtualizaComentario(Program.idOperadorLogado, chamado);
+            }
+
+
+            if (isComentarioAtualizado)
+            {
+                MessageBox.Show("Comentario adicionado");
+            } else
+            {
+                MessageBox.Show("Não foi possível adicionar o comentário");
+            }
+            txtComentario.Text = "";
+            this.carregarInformacoesChamado(chamado);
         }
     }
 }

@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <p></p>
     <div class="conteudo full d-flex">
         <div class="conteudo-historico-chamado">
             <h1 class="mt-0">Histórico de chamados</h1>
@@ -9,19 +11,14 @@
             <div class="row">
                 <div class="col">
                     <div class="d-flex">
-                        <div class="input-container">
+                        <div class="input-container mr-3 hide-mobile">
                             <label for="id">ID</label>
                             <input id="id" type="text" placeholder="Digite o ID">
                         </div>
 
-                        <div class="input-container ml-3">
+                        <div class="input-container">
                             <label for="cliente">Cliente</label>
                             <input id="cliente" type="text" placeholder="Nome do cliente">
-                        </div>
-
-                        <div class="input-container ml-3">
-                            <label for="id">Tags/Incidentes</label>
-                            <input id="id" type="text" placeholder="Digite o ID">
                         </div>
 
                         <div class="container-pesquisar align-self-end">
@@ -45,54 +42,24 @@
             </div>
             <div class="row">
                 <div class="lista-chamados d-flex">
-                   <div class="chamado encerrado" onclick="location.href='/detalheChamado.aspx';">
-                        <div class="d-flex">
-                            <div>
-                                <span>Alice severo</span>
+                    <% foreach (var chamado in listaChamados) { %>
+                        <div class="chamado <%=chamado.Status %>" onclick="location.href='/detalheChamado.aspx';">
+                            <div class="d-flex">
+                                <div>
+                                    <span><%=chamado.Cliente.Nome %></span>
+                                </div>
+                                <div class="col text-right m-0 tags">
+                                    <span class="tag"><%=chamado.Numero %></span>
+                                </div>
                             </div>
-                            <div class="col text-right m-0 tags">
-                                <span class="tag">312</span>
-                            </div>
-                        </div>
 
-                        <div class="mt-3">
-                            <p>Tags</p>
-                            <div class="tags">
-                                <span class="tag">Touchpad</span>
-                                <span class="tag">Teclado</span>
-                                <span class="tag">Monitor</span>
+                            <div class="mt-3">
+                                <p>Data</p>
+                                <p><%=chamado.DataChamado %></small>
                             </div>
-                        </div>
-
-                        <div class="mt-3">
-                            <p>Data</p>
-                            <p>07/05/2018</small>
-                        </div>
-                     </div>
-                    <div class="chamado encerrado" onclick="location.href='/detalheChamado.aspx';">
-                        <div class="d-flex">
-                            <div>
-                                <span>Alice severo</span>
-                            </div>
-                            <div class="col text-right m-0 tags">
-                                <span class="tag">312</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-3">
-                            <p>Tags</p>
-                            <div class="tags">
-                                <span class="tag">Touchpad</span>
-                                <span class="tag">Teclado</span>
-                                <span class="tag">Monitor</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-3">
-                            <p>Data</p>
-                            <p>07/05/2018</small>
-                        </div>
-                    </div>
+                        </div>      
+                    <%} %>
+                   
 
                 </div>
             </div>

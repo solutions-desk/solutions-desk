@@ -13,7 +13,7 @@ namespace solutions_desk.UserControls
 {
     public partial class UCchamados : UserControl
     {
-        private string Status;
+        private string status;
 
         public UCchamados(int numero, string status, string data, string cliente )
         {
@@ -21,6 +21,7 @@ namespace solutions_desk.UserControls
             setaStatus(status);
 
             lblNumeroChamado.Text = numero.ToString();
+            this.status = status;
             setaStatus(status);
             lblData.Text = data;
             lblNomeCliente.Text = cliente;
@@ -63,10 +64,10 @@ namespace solutions_desk.UserControls
             set { lblNomeCliente.Text = value; }
         }
 
-        public string status
+        public string Status
         {
-            get { return this.Status; }
-            set { this.Status = value; }
+            get { return this.status; }
+            set { this.status = value; }
         }
 
         public int NumeroChamado

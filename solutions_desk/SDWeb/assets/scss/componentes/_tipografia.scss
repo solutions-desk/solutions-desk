@@ -1,0 +1,31 @@
+h1 {
+    font-size: 34px;
+    margin: 1rem 0;
+}
+h2 {
+    font-size: 24px;
+    margin: 1rem 0;
+}
+h3 {
+    font-size: 18px;
+    margin: 1rem 0;
+}
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+
+    &:link, &:visited, &:hover, &:active, &:focus{
+        color: $primary;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+strong {
+    font-weight: 700;
+}

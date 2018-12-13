@@ -1,0 +1,48 @@
+.botao {
+    border: 1px solid transparent;
+    padding: 10px 12px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: $radius;
+    background-color: #e5e5e5;
+    color: #161616;
+    margin: 10px 0;
+    outline: none;
+    max-height: 35px;
+    height: 35px;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+    &.primary {
+        background-color: $primary;
+        color: #fff;
+    }
+    &.danger {
+        background-color: #f44336;
+        color: #fff;
+    }
+
+    &.block {
+        display: inline-block;
+        width: 100%;
+    }
+    &.ghost {
+        text-decoration: none;
+        background-color: transparent;
+        padding-left: 0;
+    }
+    &.icone {
+        position: relative;
+        padding-left: 2rem;
+
+        i {
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+}

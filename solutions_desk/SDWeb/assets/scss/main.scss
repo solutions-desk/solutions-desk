@@ -1,0 +1,48 @@
+@import '_variables';
+@import 'componentes/_reset';
+@import 'componentes/_grid';
+@import 'componentes/_tipografia';
+@import 'componentes/_buttons';
+@import 'componentes/_form';
+
+//paginas
+@import './public/sass/_app';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-base;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.conteudo {
+    // padding: 1rem;
+    // display: flex;
+    width: calc(100vw - 315px);
+
+    &.full {
+        width: calc(100vw - 65px);
+    }
+}
+.separador {
+    margin: 1rem 0;
+    display: block;
+    border-top: 1px solid #a9a9a9;
+    width: 100%
+}
+
+.custom-control {
+    line-height: 1.5rem;
+}
+
+.tags {
+    margin: 8px 0;
+
+    .tag {
+        font-size: 12px;
+        padding: 2px 1rem;
+        background-color: #dedcdc;
+        margin-left: 8px;
+        border-radius: 100px;
+    }
+}

@@ -76,7 +76,7 @@ strong {
 
 .botao {
   border: 1px solid transparent;
-  padding: 0 12px;
+  padding: 10px 12px;
   font-size: 1rem;
   text-transform: uppercase;
   border-radius: 3px;
@@ -150,6 +150,9 @@ textarea {
   flex-direction: column;
   text-align: center;
   align-items: center; }
+  @media screen and (max-width: 500px) {
+    .menu {
+      height: 100vh; } }
   .menu .logo-small {
     background-color: #fff;
     padding: 27px 10px;
@@ -195,12 +198,18 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 100vh; }
+  @media screen and (max-width: 600px) {
+    .login {
+      height: inherit; } }
   .login .logo {
     margin-bottom: 1rem; }
   .login .container-login {
     max-width: 330px;
     padding: 1rem;
     margin: 0 auto; }
+    @media screen and (max-width: 600px) {
+      .login .container-login {
+        margin: 20px; } }
   .login .mostrar-senha {
     position: absolute;
     right: 1rem;
@@ -243,6 +252,14 @@ textarea {
   .dashboard .lista-chamados .chamado.andamento {
     border-left-color: #1e88e5; }
 
+@media screen and (max-width: 600px) {
+  .dashboard .conteudo-detalhe-container {
+    width: 100%; } }
+
+.dashboard .conteudo-detalhe-container h1 {
+  font-size: 22px;
+  font-weight: 500; }
+
 .dashboard .conteudo-chamado {
   border-right: 1px solid #a9a9a9;
   min-width: 490px;
@@ -250,6 +267,15 @@ textarea {
   height: 100vh;
   overflow: auto;
   padding: 1rem; }
+  .dashboard .conteudo-chamado h1 {
+    font-size: 22px;
+    font-weight: 500; }
+  .dashboard .conteudo-chamado .numero-chamado {
+    font-size: 16px; }
+  @media screen and (max-width: 600px) {
+    .dashboard .conteudo-chamado {
+      min-width: 100%;
+      width: 100%; } }
 
 .dashboard .conteudo-anexo {
   width: 100%;
@@ -295,6 +321,9 @@ textarea {
   width: 100%;
   overflow: auto;
   height: 100vh; }
+  .dashboard .conteudo-historico-chamado h1 {
+    font-size: 22px;
+    font-weight: 500; }
   .dashboard .conteudo-historico-chamado .container-pesquisar {
     padding-bottom: 10px;
     padding-left: 1rem; }
@@ -305,11 +334,19 @@ textarea {
         color: #6f6f6f; }
   .dashboard .conteudo-historico-chamado .lista-chamados {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    width: 100%; }
     .dashboard .conteudo-historico-chamado .lista-chamados .chamado {
-      flex: calc(100% / 4);
+      flex: 1 0 200px;
+      box-sizing: border-box;
       margin: 1rem;
       box-shadow: 0 0 30px -8px rgba(0, 0, 0, 0.2); }
+    @media screen and (min-width: 40em) {
+      .dashboard .conteudo-historico-chamado .lista-chamados .chamado {
+        max-width: calc(30% -  1em); } }
+    @media screen and (min-width: 60em) {
+      .dashboard .conteudo-historico-chamado .lista-chamados .chamado {
+        max-width: calc(25% - 1em); } }
   .dashboard .conteudo-historico-chamado .legenda span {
     font-size: 12px;
     margin-right: 1rem; }
@@ -341,18 +378,29 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 100vh; }
+  @media screen and (max-width: 600px) {
+    .cadastro {
+      height: inherit; } }
   .cadastro .logo {
     margin-bottom: 1rem; }
   .cadastro .container-cadastro {
     max-width: 600px;
     padding: 1rem;
     margin: 0 auto; }
+    @media screen and (max-width: 600px) {
+      .cadastro .container-cadastro {
+        max-width: inherit;
+        padding: 2rem; } }
   .cadastro .mostrar-senha {
     position: absolute;
     right: 1rem;
     bottom: 10px; }
     .cadastro .mostrar-senha:hover {
       cursor: pointer; }
+
+@media screen and (max-width: 600px) {
+  .hide-mobile {
+    display: none; } }
 
 body {
   font-family: 'Roboto', sans-serif;

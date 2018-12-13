@@ -47,6 +47,7 @@
     <Compile Include="Controller\ChamadoController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\OperadorController.cs" />
     <Compile Include="Controller\PessoaController.cs" />
     <Compile Include="Controller\RelatorioController.cs" />
     <Compile Include="Model\Chamado.cs" />

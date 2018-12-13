@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="mobile-web-app-capable" content="not">
+
     <title>Solutions Desk</title>
     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/fonts/material-icons/material-icons.css">
@@ -44,7 +46,7 @@
 
                     <div class="row mt-4">
                         <div class="col">
-                            <button class="botao block" onclick="location.href='/cadastro.aspx  ';">Cadastre-se</button>
+                            <a class="botao block" href="/cadastro.aspx">Cadastre-se</a>
                         </div>
                         <div class="col">
                             <asp:Button ID="entrar" class="botao block primary" runat="server" Text="ENTRAR" OnClick="entrar_Click" />

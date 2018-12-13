@@ -1,0 +1,234 @@
+.dashboard {
+    .botao-novo-chamado {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed #414141;
+        border-radius: 5px;
+        color: #000;
+        height: 50px;
+        text-decoration: none;
+    }
+    .lista-chamados {
+        .chamado {
+            background-color: #fff;
+            border-left: 6px solid #ccc;
+            padding: 12px 8px;
+            margin: 1rem 0;
+            transition: box-shadow 0.3s ease;
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.155);
+            }
+            p {
+                margin: 0;
+                margin-bottom: 5px;
+                font-size: 14px;
+                color: #42526e;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            &.atual {
+                box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0.15);
+            }
+            &.encerrado {
+                border-left-color: #4caf50;
+            }
+            &.tecnico {
+                border-left-color: #fb8c00;
+            }
+            &.andamento {
+                border-left-color: #1e88e5;
+            }
+        }
+    }
+    .conteudo-detalhe-container {
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+    .conteudo-chamado {
+        border-right: 1px solid #a9a9a9;
+        min-width: 490px;
+        width: 490px;
+        height: 100vh;
+        overflow: auto;
+        padding: 1rem;
+
+        h1 {
+            font-size: 22px;
+            font-weight: 500;
+        }
+        .numero-chamado {
+            font-size: 16px;
+        }
+        @media screen and (max-width: 600px) {
+            min-width: 100%;
+            width: 100%;
+        }
+    }
+    .conteudo-anexo {
+        width: 100%;
+        padding: 1rem;
+
+        .adicionar-arquivo {
+            border: 1px solid #f0f0f0;
+            max-width: 450px;
+            padding: 8px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    // detalhe chamado
+    .barra-status {
+        border-bottom: 5px solid #ccc;
+        display: block;
+        // width: 100%;
+
+        &.andamento {
+            border-bottom-color: #1e88e5;
+        }
+    }
+    .comentarios {
+        .comentario {
+            // border: 2px solid red;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                border-radius: 20px;
+                background-color: #084aa2;
+                display: inline-block;
+                position: absolute;
+                left: -25px;
+
+            }
+            &:not(:last-child) {
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 20px;
+                    left: -18px;
+                    height: 80%;
+                    width: 1px;
+                    border-right: 1px solid #084aa2;
+                }
+            }
+        }
+    }
+
+    //Historico chamado
+    .conteudo-historico-chamado {
+        padding: 1rem;
+        width: 100%;
+        overflow: auto;
+        height: 100vh;
+        
+        h1 {
+            font-size: 22px;
+            font-weight: 500;
+        }
+        .container-pesquisar {
+            padding-bottom: 10px;
+            padding-left: 1rem;
+
+            .btn {
+                display: flex;
+                padding: 10px;
+
+                i {
+                    color: #6f6f6f;
+                }
+            }
+        }
+        .lista-chamados {
+            // border: 2px solid red;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .chamado {
+                // flex: auto;
+                flex: 1 0 200px;
+                box-sizing: border-box;
+                margin: 1rem;
+                box-shadow: 0 0 30px -8px rgba(0, 0, 0, 0.20);
+                
+            }
+            @media screen and (min-width: 40em) {
+                .chamado {
+                   max-width: calc(30% -  1em);
+                }
+            }
+            
+            @media screen and (min-width: 60em) {
+                .chamado {
+                    max-width: calc(25% - 1em);
+                }
+            }
+        }
+        .legenda {
+            span {
+                font-size: 12px;
+                margin-right: 1rem;
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 30px;
+                    border-radius: 100px;
+                    height: 8px;
+                    border: 1px solid transparent;
+                    margin-right: 5px;
+                    background-color: #ccc;
+                }
+
+                &.aberto {
+                    &:before {
+                        background-color: #fff;
+                        border-color: #d8d8d8;
+                    }
+                }
+                &.encerrado {
+                    &:before {
+                        background-color: #4caf50;
+                    }
+                }
+                &.tecnico {
+                    &:before {
+                        background-color: #fb8c00;
+                    }
+                }
+                &.andamento {
+                    &:before {
+                        background-color: #2815e5;
+                    }
+                }
+                &.atraso {
+                    &:before {
+                        background-color: #f12516;
+                    }
+                }
+                &.cancelado {
+                    &:before {
+                        background-color: #bbbbbb;
+                    }
+                }
+            }
+        }
+    }
+}

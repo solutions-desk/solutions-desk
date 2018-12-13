@@ -101,10 +101,11 @@
             // lblData
             // 
             this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.Location = new System.Drawing.Point(73, 45);
+            this.lblData.BackColor = System.Drawing.Color.Transparent;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Location = new System.Drawing.Point(69, 45);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(75, 13);
+            this.lblData.Size = new System.Drawing.Size(71, 13);
             this.lblData.TabIndex = 6;
             this.lblData.Text = "00/00/0000";
             this.lblData.Click += new System.EventHandler(this.lblData_Click);

@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelChamadoAtual = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -46,8 +46,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnAdicionarComentario = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtComentario = new System.Windows.Forms.RichTextBox();
+            this.lblComentario = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -111,7 +111,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panelChamadoAtual);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -130,14 +130,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Atual";
             // 
-            // panel3
+            // panelChamadoAtual
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            this.panel3.CausesValidation = false;
-            this.panel3.Location = new System.Drawing.Point(15, 128);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(220, 100);
-            this.panel3.TabIndex = 2;
+            this.panelChamadoAtual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            this.panelChamadoAtual.CausesValidation = false;
+            this.panelChamadoAtual.Location = new System.Drawing.Point(15, 128);
+            this.panelChamadoAtual.Name = "panelChamadoAtual";
+            this.panelChamadoAtual.Size = new System.Drawing.Size(220, 88);
+            this.panelChamadoAtual.TabIndex = 2;
             // 
             // panel2
             // 
@@ -220,8 +220,8 @@
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.btnAdicionarComentario);
-            this.panel5.Controls.Add(this.richTextBox1);
-            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.txtComentario);
+            this.panel5.Controls.Add(this.lblComentario);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.lblDescricao);
@@ -297,29 +297,31 @@
             this.btnAdicionarComentario.TabIndex = 54;
             this.btnAdicionarComentario.Text = "ADICIONAR COMENTÁRIO";
             this.btnAdicionarComentario.UseVisualStyleBackColor = false;
+            this.btnAdicionarComentario.Click += new System.EventHandler(this.btnAdicionarComentario_Click);
             // 
-            // richTextBox1
+            // txtComentario
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtComentario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(20, 355);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(493, 70);
-            this.richTextBox1.TabIndex = 52;
-            this.richTextBox1.Text = "";
+            this.txtComentario.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtComentario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtComentario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.txtComentario.Location = new System.Drawing.Point(20, 355);
+            this.txtComentario.MaxLength = 500;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(493, 70);
+            this.txtComentario.TabIndex = 52;
+            this.txtComentario.Text = "";
             // 
-            // label10
+            // lblComentario
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 280);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 19);
-            this.label10.TabIndex = 51;
-            this.label10.Text = "COMENTÁRIOS";
+            this.lblComentario.AutoSize = true;
+            this.lblComentario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblComentario.Location = new System.Drawing.Point(15, 280);
+            this.lblComentario.Name = "lblComentario";
+            this.lblComentario.Size = new System.Drawing.Size(118, 19);
+            this.lblComentario.TabIndex = 51;
+            this.lblComentario.Text = "COMENTÁRIOS";
             // 
             // label9
             // 
@@ -477,6 +479,7 @@
             this.lblCancelado.Size = new System.Drawing.Size(201, 35);
             this.lblCancelado.TabIndex = 4;
             this.lblCancelado.Text = "Cancelado";
+            this.lblCancelado.Click += new System.EventHandler(this.lblCancelado_Click);
             this.lblCancelado.MouseEnter += new System.EventHandler(this.lblCancelado_MouseEnter);
             this.lblCancelado.MouseLeave += new System.EventHandler(this.lblCancelado_MouseLeave);
             // 
@@ -492,6 +495,7 @@
             this.lblAtraso.Size = new System.Drawing.Size(199, 35);
             this.lblAtraso.TabIndex = 3;
             this.lblAtraso.Text = "Atraso";
+            this.lblAtraso.Click += new System.EventHandler(this.lblAtraso_Click);
             this.lblAtraso.MouseEnter += new System.EventHandler(this.lblAtraso_MouseEnter);
             this.lblAtraso.MouseLeave += new System.EventHandler(this.lblAtraso_MouseLeave);
             // 
@@ -507,6 +511,7 @@
             this.lblAndamento.Size = new System.Drawing.Size(198, 35);
             this.lblAndamento.TabIndex = 2;
             this.lblAndamento.Text = "Andamento";
+            this.lblAndamento.Click += new System.EventHandler(this.lblAndamento_Click);
             this.lblAndamento.MouseEnter += new System.EventHandler(this.lblAndamento_MouseEnter);
             this.lblAndamento.MouseLeave += new System.EventHandler(this.lblAndamento_MouseLeave);
             // 
@@ -525,6 +530,7 @@
             this.lblProcessoTecnico.Size = new System.Drawing.Size(198, 35);
             this.lblProcessoTecnico.TabIndex = 1;
             this.lblProcessoTecnico.Text = "Processo técnico";
+            this.lblProcessoTecnico.Click += new System.EventHandler(this.lblProcessoTecnico_Click);
             this.lblProcessoTecnico.MouseEnter += new System.EventHandler(this.lblProcessoTecnico_MouseEnter);
             this.lblProcessoTecnico.MouseLeave += new System.EventHandler(this.lblProcessoTecnico_MouseLeave);
             // 
@@ -540,6 +546,7 @@
             this.lblEncerrado.Size = new System.Drawing.Size(198, 35);
             this.lblEncerrado.TabIndex = 0;
             this.lblEncerrado.Text = "Encerrado";
+            this.lblEncerrado.Click += new System.EventHandler(this.lblEncerrado_Click);
             this.lblEncerrado.MouseEnter += new System.EventHandler(this.lblEncerrado_MouseEnter);
             this.lblEncerrado.MouseLeave += new System.EventHandler(this.lblEncerrado_MouseLeave);
             // 
@@ -585,15 +592,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelChamadoAtual;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblNumeroChamado;
         private System.Windows.Forms.Panel panelStatusChamado;
         private System.Windows.Forms.Label lblEditarStatus;
         private System.Windows.Forms.Label lblStatusChamado;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RichTextBox txtComentario;
+        private System.Windows.Forms.Label lblComentario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblDescricao;

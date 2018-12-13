@@ -1,0 +1,10 @@
+@import 'menu/_menu';
+@import 'login/_login';
+@import 'dashboard/_dashboard';
+@import 'cadastro/_cadastro';
+
+@media screen and (max-width: 600px) {
+    .hide-mobile {
+        display: none;
+    }
+}

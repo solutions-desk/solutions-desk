@@ -1,0 +1,30 @@
+label {
+    display: block;
+    color: #000;
+    margin-bottom: 10px;
+}
+input, select, textarea {
+    border: 1px solid #cccccc;
+    padding: 1rem;
+    background-color: #fafbfc;
+    font-size: 1rem;
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    height: 45px;
+    max-height: 45px;
+}
+input[type='checkbox'] {
+    display: none;
+}
+select {
+    padding: 10px;
+}
+textarea {
+    max-height: initial;
+    height: initial;
+}
+.input-container {
+    position: relative;
+    margin: 10px 0;
+}

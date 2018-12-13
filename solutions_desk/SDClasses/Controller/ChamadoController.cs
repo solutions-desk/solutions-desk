@@ -106,5 +106,39 @@ namespace SDClasses.Controller
             return false;
             
         }
+
+        public bool AtualizarStatusChamado(Chamado chamado, string status, int idOperador)
+        {
+            var isAtualizado = chamado.AtualizarStatusChamado(chamado, status, idOperador);
+            
+            return isAtualizado;
+        }
+
+        public bool AdicionarComentario(int idOperador, Chamado chamado)
+        {
+            var comentarioAdicionado = chamado.AdicionarComentario(idOperador, chamado);
+
+            if (comentarioAdicionado)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+
+        public bool AtualizaComentario(int idOperador, Chamado chamado)
+        {
+            var comentarioAdicionado = chamado.AtualizaComentario(idOperador, chamado);
+
+            if (comentarioAdicionado)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

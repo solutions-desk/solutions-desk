@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="sub-menu">
+    <div class="sub-menu hide-mobile">
             <a href="javascript:void(0);" class="botao icone ghost" onClick="window.history.back();">
                 <i class="material-icons">arrow_back</i>
                 Voltar
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="conteudo d-flex">
+        <div class="conteudo conteudo-detalhe-container d-flex">
             <div class="conteudo-chamado">
                 <h1 class="mt-0">Detalhe do chamado</h1>
 
@@ -49,10 +49,10 @@
                     <div class="col">
                         <div class="d-flex">
                             <div>
-                                <h2><strong>D356214564</strong></h2>
+                                <h2 class="numero-chamado"><strong>D356214564</strong></h2>
                             </div>
                             <div class="col pr-0 text-right tags d-flex justify-content-end">
-                                <span class="tag align-self-center">Chamado em andamento</span>
+                                <span class="tag align-self-center">Em andamento</span>
                             </div>
                         </div>
                         <span class="barra-status andamento"></span>
@@ -71,15 +71,6 @@
                 <div class="mb-4">
                     <p class="m-0"><strong>Mensagem de errro:</strong></p>
                     <p class="mt-0">Teclado parou de funcionar por motivos desconhecidos</p>
-                </div>
-
-                <div class="mb-4">
-                    <p class="m-0"><strong>Tags/Incidentes:</strong></p>
-                    <div class="tags">
-                        <span class="tag">Teclado</span>
-                        <span class="tag">Touchpad</span>
-                        <span class="tag">Monitor</span>
-                    </div>
                 </div>
 
                 <div class="mb-4">
@@ -105,7 +96,7 @@
 
                 <span class="separador my-4"></span>
 
-                <div class="my-2 text-center">
+                <div class="my-2 text-center" style="padding-bottom: 100px;">
                     <h3>O chamado pode ser cancelado a qualquer momento</h3>
                     <button class="botao icone danger">
                         <i class="material-icons">block</i>
@@ -113,7 +104,7 @@
                     </button>
                 </div>
             </div>
-            <div class="conteudo-anexo">
+            <div class="conteudo-anexo hide-mobile">
 
                 <div class="row p-0">
                     <div class="px-2">

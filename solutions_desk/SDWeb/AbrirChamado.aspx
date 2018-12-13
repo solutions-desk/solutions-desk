@@ -3,7 +3,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="sub-menu">
+   <div class="sub-menu hide-mobile">
             <a href="javascript:void(0);" class="botao-novo-chamado">
                 <i class="material-icons">add</i>
                 Novo Chamado
@@ -36,12 +36,12 @@
             </div>
         </div>
 
-        <div class="conteudo d-flex">
+        <div class="conteudo conteudo-detalhe-container d-flex">
             <div class="conteudo-chamado">
                 <h1 class="mt-0">Abrir chamado</h1>
 
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-12 col-sm-8">
                         <div class="input-container">
                             <label for="identificacao">Identificação*</label>
                             <input id="identificacao" type="text" placeholder="Digite a identificação do equipamento" autocomplete="off">
@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="input-container">
                                     <label for="marca">Marca*</label>
                                     <select>
@@ -63,7 +63,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="input-container">
                                     <label for="modelo">Modelo*</label>
                                     <select id="modelo">
@@ -79,31 +79,17 @@
                 <div class="row">
                     <div class="col">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-12 col-sm-4">
                                 <div class="input-container">
                                     <label for="telefone">Telefone*</label>
                                     <input id="telefone" type="text" placeholder="(xx)xxxx-xxxx" autocomplete="off">
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-sm">
                                 <div class="input-container">
                                     <label for="erro">Mensagem de erro</label>
                                     <input id="erro" type="text" placeholder="Digite a mensagem de erro" autocomplete="off">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="input-container">
-                            <label for="tags">Tags/Incidentes*</label>
-                            <input id="tags" type="text" placeholder="[ ENTER ] para adicionar">
-                            <div class="tags">
-                                <span class="tag">Teclado</span>
-                                <span class="tag">Touchpad</span>
-                                <span class="tag">Monitor</span>
                             </div>
                         </div>
                     </div>
@@ -138,7 +124,7 @@
                         <label class="custom-control-label" for="acompanharSms">Acompanhar via SMS</label>
                     </div>
                 </div>
-                <div class="my-2">
+                <div class="my-2" style="padding-bottom: 100px;">
                     <button class="botao icone primary">
                         <i class="material-icons">add</i>
                         Abrir Chamado
@@ -147,7 +133,7 @@
 
 
             </div>
-            <div class="conteudo-anexo">
+            <div class="conteudo-anexo hide-mobile">
 
                 <div class="row p-0">
                     <div class="px-2">
@@ -175,4 +161,8 @@
                 </div>
             </div>
         </div>
+    <script>
+        $(".item-menu").eq(0).addClass("selecionado");
+
+    </script>
 </asp:Content>
